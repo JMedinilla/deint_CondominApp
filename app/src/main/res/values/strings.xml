@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">CondominApp</string>
+    <string name="contentdescription_splashscreen_imglogo">contentDescription_splashscreen_imgLogo</string>
 </resources>
