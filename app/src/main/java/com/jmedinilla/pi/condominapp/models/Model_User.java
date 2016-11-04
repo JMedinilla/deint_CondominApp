@@ -13,5 +13,5 @@ public class Model_User {
     private String us_phone;
     private String us_mail;
     private String us_name;
-    private String us_category;
+    private int us_category;
 }

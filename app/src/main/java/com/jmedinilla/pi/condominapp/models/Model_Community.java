@@ -46,13 +46,13 @@ public class Model_Community implements Comparable<Model_Community> {
     }
 
     @Override
-    public boolean equals(Object o) {
+    public boolean equals(Object obj) {
         boolean result = false;
         //The object can't be null
-        if (o != null) {
+        if (obj != null) {
             //The object has to be a Community
-            if (o instanceof Model_Community) {
-                Model_Community another = (Model_Community)o;
+            if (obj instanceof Model_Community) {
+                Model_Community another = (Model_Community)obj;
                 //If the Postal, Address, Number and Block are equals, it's the same community
                 if (this.co_postal.equals(another.co_postal) && this.co_address.equals(another.co_address)
                         && this.co_number.equals(another.co_number) && this.co_block.equals(another.co_block)) {

@@ -25,13 +25,13 @@ public class Model_Document implements Comparable<Model_Document> {
     }
 
     @Override
-    public boolean equals(Object o) {
+    public boolean equals(Object obj) {
         boolean result = false;
         //The object can't be null
-        if (o != null) {
+        if (obj != null) {
             //The object has to be a Document
-            if (o instanceof Model_Document) {
-                Model_Document another = (Model_Document)o;
+            if (obj instanceof Model_Document) {
+                Model_Document another = (Model_Document)obj;
                 //If the Title and Link are equals, it's the same document
                 if (this.do_title.equals(another.do_title) && this.do_link.equals(another.do_link)) {
                     result = true;
