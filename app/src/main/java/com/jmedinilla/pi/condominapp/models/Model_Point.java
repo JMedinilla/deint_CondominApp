@@ -7,7 +7,7 @@ package com.jmedinilla.pi.condominapp.models;
  */
 public class Model_Point {
     private int po_id;
-    private Model_Meeting po_meeting;
+    private int po_meeting;
     private String po_title;
     private String po_content;
 }
