@@ -65,7 +65,10 @@ public class Model_Community implements Comparable<Model_Community> {
 
     @Override
     public String toString() {
-        return "Community: " + co_postal + " (postal), " + co_address + " n" + co_number + " (address), " + co_admin_name + " (admin)";
+        return "Community: "
+                + co_postal + " (postal), "
+                + co_address + " n" + co_number + " (address), "
+                + co_admin_name + " (admin)";
     }
 
     /**
