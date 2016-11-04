@@ -108,32 +108,6 @@ public class Model_Document implements Comparable<Model_Document> {
     /**
      * Document comparators
      */
-    //ID
-    public static final Comparator<Model_Document> COMPARATOR_DOCUMENT_ID_ASC = new Comparator<Model_Document>() {
-        @Override
-        public int compare(Model_Document o1, Model_Document o2) {
-            return o1.getDo_id() - o2.getDo_id();
-        }
-    };
-    public static final Comparator<Model_Document> COMPARATOR_DOCUMENT_ID_DES = new Comparator<Model_Document>() {
-        @Override
-        public int compare(Model_Document o1, Model_Document o2) {
-            return o2.getDo_id() - o1.getDo_id();
-        }
-    };
-    //COMMUNITY
-    public static final Comparator<Model_Document> COMPARATOR_DOCUMENT_COMMUNITY_ASC = new Comparator<Model_Document>() {
-        @Override
-        public int compare(Model_Document o1, Model_Document o2) {
-            return o1.getDo_id() - o2.getDo_id();
-        }
-    };
-    public static final Comparator<Model_Document> COMPARATOR_DOCUMENT_COMMUNITY_DES = new Comparator<Model_Document>() {
-        @Override
-        public int compare(Model_Document o1, Model_Document o2) {
-            return o2.getDo_community() - o1.getDo_community();
-        }
-    };
     //TITLE
     public static final Comparator<Model_Document> COMPARATOR_DOCUMENT_TITLE_ASC = new Comparator<Model_Document>() {
         @Override
@@ -145,32 +119,6 @@ public class Model_Document implements Comparable<Model_Document> {
         @Override
         public int compare(Model_Document o1, Model_Document o2) {
             return o2.getDo_title().toUpperCase().compareTo(o1.getDo_title().toUpperCase());
-        }
-    };
-    //DESCRIPTION
-    public static final Comparator<Model_Document> COMPARATOR_DOCUMENT_DESCRIPTION_ASC = new Comparator<Model_Document>() {
-        @Override
-        public int compare(Model_Document o1, Model_Document o2) {
-            return o1.getDo_description().toUpperCase().compareTo(o2.getDo_description().toUpperCase());
-        }
-    };
-    public static final Comparator<Model_Document> COMPARATOR_DOCUMENT_DESCRIPTION_DES = new Comparator<Model_Document>() {
-        @Override
-        public int compare(Model_Document o1, Model_Document o2) {
-            return o2.getDo_description().toUpperCase().compareTo(o1.getDo_description().toUpperCase());
-        }
-    };
-    //LINK
-    public static final Comparator<Model_Document> COMPARATOR_DOCUMENT_LINK_ASC = new Comparator<Model_Document>() {
-        @Override
-        public int compare(Model_Document o1, Model_Document o2) {
-            return o1.getDo_link().toUpperCase().compareTo(o2.getDo_link().toUpperCase());
-        }
-    };
-    public static final Comparator<Model_Document> COMPARATOR_DOCUMENT_LINK_DES = new Comparator<Model_Document>() {
-        @Override
-        public int compare(Model_Document o1, Model_Document o2) {
-            return o2.getDo_link().toUpperCase().compareTo(o1.getDo_link().toUpperCase());
         }
     };
 }

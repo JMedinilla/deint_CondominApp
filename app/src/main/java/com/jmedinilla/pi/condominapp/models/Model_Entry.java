@@ -117,19 +117,6 @@ public class Model_Entry implements Comparable<Model_Entry> {
     /**
      * Entry comparators
      */
-    //ID
-    public static final Comparator<Model_Entry> COMPARATOR_ENTRY_ID_ASC = new Comparator<Model_Entry>() {
-        @Override
-        public int compare(Model_Entry o1, Model_Entry o2) {
-            return o1.getEn_id() - o2.getEn_id();
-        }
-    };
-    public static final Comparator<Model_Entry> COMPARATOR_ENTRY_ID_DES = new Comparator<Model_Entry>() {
-        @Override
-        public int compare(Model_Entry o1, Model_Entry o2) {
-            return o2.getEn_id() - o1.getEn_id();
-        }
-    };
     //TITLE
     public static final Comparator<Model_Entry> COMPARATOR_ENTRY_TITLE_ASC = new Comparator<Model_Entry>() {
         @Override
@@ -141,19 +128,6 @@ public class Model_Entry implements Comparable<Model_Entry> {
         @Override
         public int compare(Model_Entry o1, Model_Entry o2) {
             return o2.getEn_title().toUpperCase().compareTo(o1.getEn_title().toUpperCase());
-        }
-    };
-    //CONTENT
-    public static final Comparator<Model_Entry> COMPARATOR_ENTRY_CONTENT_ASC = new Comparator<Model_Entry>() {
-        @Override
-        public int compare(Model_Entry o1, Model_Entry o2) {
-            return o1.getEn_content().toUpperCase().compareTo(o2.getEn_content().toUpperCase());
-        }
-    };
-    public static final Comparator<Model_Entry> COMPARATOR_ENTRY_CONTENT_DES = new Comparator<Model_Entry>() {
-        @Override
-        public int compare(Model_Entry o1, Model_Entry o2) {
-            return o2.getEn_content().toUpperCase().compareTo(o1.getEn_content().toUpperCase());
         }
     };
     //DATE

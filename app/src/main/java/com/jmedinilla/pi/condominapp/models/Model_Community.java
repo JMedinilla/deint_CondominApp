@@ -227,56 +227,10 @@ public class Model_Community implements Comparable<Model_Community> {
             return o2.getCo_locality().toUpperCase().compareTo(o1.getCo_locality().toUpperCase());
         }
     };
-    //MUNICIPALITY
-    public static final Comparator<Model_Community> COMPARATOR_COMMUNITY_MUNICIPALITY_ASC = new Comparator<Model_Community>() {
-        @Override
-        public int compare(Model_Community o1, Model_Community o2) {
-            return o1.getCo_municipality().toUpperCase().compareTo(o2.getCo_municipality().toUpperCase());
-        }
-    };
     public static final Comparator<Model_Community> COMPARATOR_COMMUNITY_MUNICIPALITY_DES = new Comparator<Model_Community>() {
         @Override
         public int compare(Model_Community o1, Model_Community o2) {
             return o2.getCo_municipality().toUpperCase().compareTo(o1.getCo_municipality().toUpperCase());
-        }
-    };
-    //ADDRESS
-    public static final Comparator<Model_Community> COMPARATOR_COMMUNITY_ADDRESS_ASC = new Comparator<Model_Community>() {
-        @Override
-        public int compare(Model_Community o1, Model_Community o2) {
-            return o1.getCo_address().toUpperCase().compareTo(o2.getCo_address().toUpperCase());
-        }
-    };
-    public static final Comparator<Model_Community> COMPARATOR_COMMUNITY_ADDRESS_DES = new Comparator<Model_Community>() {
-        @Override
-        public int compare(Model_Community o1, Model_Community o2) {
-            return o2.getCo_address().toUpperCase().compareTo(o1.getCo_address().toUpperCase());
-        }
-    };
-    //NUMBER
-    public static final Comparator<Model_Community> COMPARATOR_COMMUNITY_NUMBER_ASC = new Comparator<Model_Community>() {
-        @Override
-        public int compare(Model_Community o1, Model_Community o2) {
-            return o1.getCo_number().toUpperCase().compareTo(o2.getCo_number().toUpperCase());
-        }
-    };
-    public static final Comparator<Model_Community> COMPARATOR_COMMUNITY_NUMBER_DES = new Comparator<Model_Community>() {
-        @Override
-        public int compare(Model_Community o1, Model_Community o2) {
-            return o2.getCo_number().toUpperCase().compareTo(o1.getCo_number().toUpperCase());
-        }
-    };
-    //BLOCK
-    public static final Comparator<Model_Community> COMPARATOR_COMMUNITY_BLOCK_ASC = new Comparator<Model_Community>() {
-        @Override
-        public int compare(Model_Community o1, Model_Community o2) {
-            return o1.getCo_block().toUpperCase().compareTo(o2.getCo_block().toUpperCase());
-        }
-    };
-    public static final Comparator<Model_Community> COMPARATOR_COMMUNITY_BLOCK_DES = new Comparator<Model_Community>() {
-        @Override
-        public int compare(Model_Community o1, Model_Community o2) {
-            return o2.getCo_block().toUpperCase().compareTo(o1.getCo_block().toUpperCase());
         }
     };
     //POSTAL
@@ -303,84 +257,6 @@ public class Model_Community implements Comparable<Model_Community> {
         @Override
         public int compare(Model_Community o1, Model_Community o2) {
             return o2.getCo_apartments() - o1.getCo_apartments();
-        }
-    };
-    //ADMIN NAME
-    public static final Comparator<Model_Community> COMPARATOR_COMMUNITY_ADMINNAME_ASC = new Comparator<Model_Community>() {
-        @Override
-        public int compare(Model_Community o1, Model_Community o2) {
-            return o1.getCo_admin_name().toUpperCase().compareTo(o2.getCo_admin_name().toUpperCase());
-        }
-    };
-    public static final Comparator<Model_Community> COMPARATOR_COMMUNITY_ADMINNAME_DES = new Comparator<Model_Community>() {
-        @Override
-        public int compare(Model_Community o1, Model_Community o2) {
-            return o2.getCo_admin_name().toUpperCase().compareTo(o1.getCo_admin_name().toUpperCase());
-        }
-    };
-    //ADMIN ADDRESS
-    public static final Comparator<Model_Community> COMPARATOR_COMMUNITY_ADMINADDRESS_ASC = new Comparator<Model_Community>() {
-        @Override
-        public int compare(Model_Community o1, Model_Community o2) {
-            return o1.getCo_admin_address().toUpperCase().compareTo(o2.getCo_admin_address().toUpperCase());
-        }
-    };
-    public static final Comparator<Model_Community> COMPARATOR_COMMUNITY_ADMINADDRESS_DES = new Comparator<Model_Community>() {
-        @Override
-        public int compare(Model_Community o1, Model_Community o2) {
-            return o2.getCo_admin_address().toUpperCase().compareTo(o1.getCo_admin_address().toUpperCase());
-        }
-    };
-    //ADMIN PHONE
-    public static final Comparator<Model_Community> COMPARATOR_COMMUNITY_ADMINPHONE_ASC = new Comparator<Model_Community>() {
-        @Override
-        public int compare(Model_Community o1, Model_Community o2) {
-            return o1.getCo_admin_phone().toUpperCase().compareTo(o2.getCo_admin_phone().toUpperCase());
-        }
-    };
-    public static final Comparator<Model_Community> COMPARATOR_COMMUNITY_ADMINPHONE_DES = new Comparator<Model_Community>() {
-        @Override
-        public int compare(Model_Community o1, Model_Community o2) {
-            return o2.getCo_admin_phone().toUpperCase().compareTo(o1.getCo_admin_phone().toUpperCase());
-        }
-    };
-    //ADMIN MAIL
-    public static final Comparator<Model_Community> COMPARATOR_COMMUNITY_ADMINMAIL_ASC = new Comparator<Model_Community>() {
-        @Override
-        public int compare(Model_Community o1, Model_Community o2) {
-            return o1.getCo_admin_mail().toUpperCase().compareTo(o2.getCo_admin_mail().toUpperCase());
-        }
-    };
-    public static final Comparator<Model_Community> COMPARATOR_COMMUNITY_ADMINMAIL_DES = new Comparator<Model_Community>() {
-        @Override
-        public int compare(Model_Community o1, Model_Community o2) {
-            return o2.getCo_admin_mail().toUpperCase().compareTo(o1.getCo_admin_mail().toUpperCase());
-        }
-    };
-    //PRESIDENT NAME
-    public static final Comparator<Model_Community> COMPARATOR_COMMUNITY_PRESIDENTNAME_ASC = new Comparator<Model_Community>() {
-        @Override
-        public int compare(Model_Community o1, Model_Community o2) {
-            return o1.getCo_president_name().toUpperCase().compareTo(o2.getCo_president_name().toUpperCase());
-        }
-    };
-    public static final Comparator<Model_Community> COMPARATOR_COMMUNITY_PRESIDENTNAME_DES = new Comparator<Model_Community>() {
-        @Override
-        public int compare(Model_Community o1, Model_Community o2) {
-            return o2.getCo_president_name().toUpperCase().compareTo(o1.getCo_president_name().toUpperCase());
-        }
-    };
-    //PRESIDENT PHONE
-    public static final Comparator<Model_Community> COMPARATOR_COMMUNITY_PRESIDENTPHONE_ASC = new Comparator<Model_Community>() {
-        @Override
-        public int compare(Model_Community o1, Model_Community o2) {
-            return o1.getCo_president_phone().toUpperCase().compareTo(o2.getCo_president_phone().toUpperCase());
-        }
-    };
-    public static final Comparator<Model_Community> COMPARATOR_COMMUNITY_PRESIDENTPHONE_DES = new Comparator<Model_Community>() {
-        @Override
-        public int compare(Model_Community o1, Model_Community o2) {
-            return o2.getCo_president_phone().toUpperCase().compareTo(o1.getCo_president_phone().toUpperCase());
         }
     };
 }
