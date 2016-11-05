@@ -33,7 +33,8 @@ public class Model_Document implements Comparable<Model_Document> {
             if (obj instanceof Model_Document) {
                 Model_Document another = (Model_Document)obj;
                 //If the Title and Link are equals, it's the same document
-                if (this.do_title.equals(another.do_title) && this.do_link.equals(another.do_link)) {
+                if (this.do_title.toUpperCase().equals(another.do_title.toUpperCase())
+                        && this.do_link.toUpperCase().equals(another.do_link.toUpperCase())) {
                     result = true;
                 }
             }
@@ -53,16 +54,16 @@ public class Model_Document implements Comparable<Model_Document> {
      */
     @Override
     public int compareTo(@NonNull Model_Document another) {
-        if (this.getDo_title().compareTo(another.getDo_title()) == 0) {
-            if (this.getDo_link().compareTo(another.getDo_link()) == 0) {
-                return this.getDo_description().compareTo(another.getDo_description());
+        if (this.getDo_title().toUpperCase().compareTo(another.getDo_title().toUpperCase()) == 0) {
+            if (this.getDo_link().toUpperCase().compareTo(another.getDo_link().toUpperCase()) == 0) {
+                return this.getDo_description().toUpperCase().compareTo(another.getDo_description().toUpperCase());
             }
             else {
-                return this.getDo_link().compareTo(another.getDo_link());
+                return this.getDo_link().toUpperCase().compareTo(another.getDo_link().toUpperCase());
             }
         }
         else {
-            return this.getDo_title().compareTo(another.getDo_title());
+            return this.getDo_title().toUpperCase().compareTo(another.getDo_title().toUpperCase());
         }
     }
 

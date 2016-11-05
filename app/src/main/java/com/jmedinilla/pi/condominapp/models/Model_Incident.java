@@ -36,7 +36,7 @@ public class Model_Incident implements Comparable<Model_Incident> {
             if (obj instanceof Model_Incident) {
                 Model_Incident another = (Model_Incident)obj;
                 //If the Title is equal, it's the same incident
-                if (this.in_title.equals(another.in_title)) {
+                if (this.in_title.toUpperCase().equals(another.in_title.toUpperCase())) {
                     result = true;
                 }
             }
@@ -56,16 +56,16 @@ public class Model_Incident implements Comparable<Model_Incident> {
      */
     @Override
     public int compareTo(Model_Incident another) {
-        if (this.getIn_title().compareTo(another.getIn_title()) == 0) {
+        if (this.getIn_title().toUpperCase().compareTo(another.getIn_title().toUpperCase()) == 0) {
             if (this.getIn_date().compareTo(another.getIn_date()) == 0) {
-                return this.getIn_description().compareTo(another.getIn_description());
+                return this.getIn_description().toUpperCase().compareTo(another.getIn_description().toUpperCase());
             }
             else {
                 return this.getIn_date().compareTo(another.getIn_date());
             }
         }
         else {
-            return this.getIn_title().compareTo(another.getIn_title());
+            return this.getIn_title().toUpperCase().compareTo(another.getIn_title().toUpperCase());
         }
     }
 

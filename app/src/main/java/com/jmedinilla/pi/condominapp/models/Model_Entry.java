@@ -35,7 +35,8 @@ public class Model_Entry implements Comparable<Model_Entry> {
             if (obj instanceof Model_Entry) {
                 Model_Entry another = (Model_Entry)obj;
                 //If the Title and Content are equals, it's the same entry
-                if (this.en_title.equals(another.en_title) && this.en_content.equals(another.en_content)) {
+                if (this.en_title.toUpperCase().equals(another.en_title.toUpperCase())
+                        && this.en_content.toUpperCase().equals(another.en_content.toUpperCase())) {
                     result = true;
                 }
             }
@@ -56,11 +57,11 @@ public class Model_Entry implements Comparable<Model_Entry> {
     @Override
     public int compareTo(Model_Entry another) {
         if (this.getEn_date().compareTo(another.getEn_date()) == 0) {
-            if (this.getEn_title().compareTo(another.getEn_title()) == 0) {
-                return this.getEn_content().compareTo(another.getEn_content());
+            if (this.getEn_title().toUpperCase().compareTo(another.getEn_title().toUpperCase()) == 0) {
+                return this.getEn_content().toUpperCase().compareTo(another.getEn_content().toUpperCase());
             }
             else {
-                return this.getEn_title().compareTo(another.getEn_title());
+                return this.getEn_title().toUpperCase().compareTo(another.getEn_title().toUpperCase());
             }
         }
         else {

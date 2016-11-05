@@ -54,8 +54,10 @@ public class Model_Community implements Comparable<Model_Community> {
             if (obj instanceof Model_Community) {
                 Model_Community another = (Model_Community)obj;
                 //If the Postal, Address, Number and Block are equals, it's the same community
-                if (this.co_postal.equals(another.co_postal) && this.co_address.equals(another.co_address)
-                        && this.co_number.equals(another.co_number) && this.co_block.equals(another.co_block)) {
+                if (this.co_postal.toUpperCase().equals(another.co_postal.toUpperCase())
+                        && this.co_address.toUpperCase().equals(another.co_address.toUpperCase())
+                        && this.co_number.toUpperCase().equals(another.co_number.toUpperCase())
+                        && this.co_block.toUpperCase().equals(another.co_block.toUpperCase())) {
                     result = true;
                 }
             }
@@ -78,21 +80,21 @@ public class Model_Community implements Comparable<Model_Community> {
      */
     @Override
     public int compareTo(@NonNull Model_Community another) {
-        if (this.getCo_postal().compareTo(another.getCo_postal()) == 0) {
-            if (this.getCo_address().compareTo(another.getCo_address()) == 0) {
-                if (this.getCo_number().compareTo(another.getCo_number()) == 0) {
-                    return this.getCo_block().compareTo(another.getCo_block());
+        if (this.getCo_postal().toUpperCase().compareTo(another.getCo_postal().toUpperCase()) == 0) {
+            if (this.getCo_address().toUpperCase().compareTo(another.getCo_address().toUpperCase()) == 0) {
+                if (this.getCo_number().toUpperCase().compareTo(another.getCo_number().toUpperCase()) == 0) {
+                    return this.getCo_block().toUpperCase().compareTo(another.getCo_block().toUpperCase());
                 }
                 else {
-                    return this.getCo_number().compareTo(another.getCo_number());
+                    return this.getCo_number().toUpperCase().compareTo(another.getCo_number().toUpperCase());
                 }
             }
             else {
-                return this.getCo_address().compareTo(another.getCo_address());
+                return this.getCo_address().toUpperCase().compareTo(another.getCo_address().toUpperCase());
             }
         }
         else {
-            return this.getCo_postal().compareTo(another.getCo_postal());
+            return this.getCo_postal().toUpperCase().compareTo(another.getCo_postal().toUpperCase());
         }
     }
 
