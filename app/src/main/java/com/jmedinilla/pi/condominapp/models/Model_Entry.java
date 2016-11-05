@@ -1,11 +1,13 @@
 package com.jmedinilla.pi.condominapp.models;
 
+import android.support.annotation.NonNull;
+
 import java.util.Comparator;
 import java.util.Date;
 
 /**
  * Class created by JMedinilla on 2016-10-29
- *
+ * <p>
  * BD entry for a board
  */
 public class Model_Entry implements Comparable<Model_Entry> {
@@ -33,7 +35,7 @@ public class Model_Entry implements Comparable<Model_Entry> {
         if (obj != null) {
             //The object has to be an Entry
             if (obj instanceof Model_Entry) {
-                Model_Entry another = (Model_Entry)obj;
+                Model_Entry another = (Model_Entry) obj;
                 //If the Title and Content are equals, it's the same entry
                 if (this.en_title.toUpperCase().equals(another.en_title.toUpperCase())
                         && this.en_content.toUpperCase().equals(another.en_content.toUpperCase())) {
@@ -51,20 +53,19 @@ public class Model_Entry implements Comparable<Model_Entry> {
 
     /**
      * Entry comparable method
+     *
      * @param another Entry to compare
      * @return Wich one is higher
      */
     @Override
-    public int compareTo(Model_Entry another) {
+    public int compareTo(@NonNull Model_Entry another) {
         if (this.getEn_date().compareTo(another.getEn_date()) == 0) {
             if (this.getEn_title().toUpperCase().compareTo(another.getEn_title().toUpperCase()) == 0) {
                 return this.getEn_content().toUpperCase().compareTo(another.getEn_content().toUpperCase());
-            }
-            else {
+            } else {
                 return this.getEn_title().toUpperCase().compareTo(another.getEn_title().toUpperCase());
             }
-        }
-        else {
+        } else {
             return this.getEn_date().compareTo(another.getEn_date());
         }
     }
@@ -76,41 +77,52 @@ public class Model_Entry implements Comparable<Model_Entry> {
     public int getEn_id() {
         return en_id;
     }
+
     public void setEn_id(int en_id) {
         this.en_id = en_id;
     }
+
     //USER
     public Model_User getEn_user() {
         return en_user;
     }
+
     public void setEn_user(Model_User en_user) {
         this.en_user = en_user;
     }
+
     //TITLE
     public String getEn_title() {
         return en_title;
     }
+
     public void setEn_title(String en_title) {
         this.en_title = en_title;
     }
+
     //CONTENT
     public String getEn_content() {
         return en_content;
     }
+
     public void setEn_content(String en_content) {
         this.en_content = en_content;
     }
+
     //DATE
     public Date getEn_date() {
         return en_date;
     }
+
     public void setEn_date(Date en_date) {
         this.en_date = en_date;
     }
+
     //CATEGORY
     public int getEn_category() {
         return en_category;
     }
+
     public void setEn_category(int en_category) {
         this.en_category = en_category;
     }

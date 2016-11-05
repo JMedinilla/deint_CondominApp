@@ -1,11 +1,13 @@
 package com.jmedinilla.pi.condominapp.models;
 
+import android.support.annotation.NonNull;
+
 import java.util.Comparator;
 import java.util.Date;
 
 /**
  * Class created by JMedinilla on 2016-10-29
- *
+ * <p>
  * BD meeting
  */
 public class Model_Meeting implements Comparable<Model_Meeting> {
@@ -26,7 +28,7 @@ public class Model_Meeting implements Comparable<Model_Meeting> {
         if (obj != null) {
             //The object has to be a Meeting
             if (obj instanceof Model_Meeting) {
-                Model_Meeting another = (Model_Meeting)obj;
+                Model_Meeting another = (Model_Meeting) obj;
                 //If the Date is equal, it's the same meeting
                 if (this.me_date.equals(another.me_date)) {
                     result = true;
@@ -43,11 +45,12 @@ public class Model_Meeting implements Comparable<Model_Meeting> {
 
     /**
      * Meeting comparable method
+     *
      * @param another Meeting to compare
      * @return Which one is higher
      */
     @Override
-    public int compareTo(Model_Meeting another) {
+    public int compareTo(@NonNull Model_Meeting another) {
         return this.getMe_date().compareTo(another.getMe_date());
     }
 
@@ -58,20 +61,25 @@ public class Model_Meeting implements Comparable<Model_Meeting> {
     public int getMe_id() {
         return me_id;
     }
+
     public void setMe_id(int me_id) {
         this.me_id = me_id;
     }
+
     //COMMUNITY
     public int getMe_community() {
         return me_community;
     }
+
     public void setMe_community(int me_community) {
         this.me_community = me_community;
     }
+
     //DATE
     public Date getMe_date() {
         return me_date;
     }
+
     public void setMe_date(Date me_date) {
         this.me_date = me_date;
     }

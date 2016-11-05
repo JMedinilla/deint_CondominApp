@@ -1,11 +1,12 @@
 package com.jmedinilla.pi.condominapp.models;
 
 import android.support.annotation.NonNull;
+
 import java.util.Comparator;
 
 /**
  * Class created by JMedinilla on 2016-10-29
- *
+ * <p>
  * BD community
  */
 public class Model_Community implements Comparable<Model_Community> {
@@ -52,7 +53,7 @@ public class Model_Community implements Comparable<Model_Community> {
         if (obj != null) {
             //The object has to be a Community
             if (obj instanceof Model_Community) {
-                Model_Community another = (Model_Community)obj;
+                Model_Community another = (Model_Community) obj;
                 //If the Postal, Address, Number and Block are equals, it's the same community
                 if (this.co_postal.toUpperCase().equals(another.co_postal.toUpperCase())
                         && this.co_address.toUpperCase().equals(another.co_address.toUpperCase())
@@ -75,6 +76,7 @@ public class Model_Community implements Comparable<Model_Community> {
 
     /**
      * Community comparable method
+     *
      * @param another Community to compare
      * @return Wich one is higher
      */
@@ -84,16 +86,13 @@ public class Model_Community implements Comparable<Model_Community> {
             if (this.getCo_address().toUpperCase().compareTo(another.getCo_address().toUpperCase()) == 0) {
                 if (this.getCo_number().toUpperCase().compareTo(another.getCo_number().toUpperCase()) == 0) {
                     return this.getCo_block().toUpperCase().compareTo(another.getCo_block().toUpperCase());
-                }
-                else {
+                } else {
                     return this.getCo_number().toUpperCase().compareTo(another.getCo_number().toUpperCase());
                 }
-            }
-            else {
+            } else {
                 return this.getCo_address().toUpperCase().compareTo(another.getCo_address().toUpperCase());
             }
-        }
-        else {
+        } else {
             return this.getCo_postal().toUpperCase().compareTo(another.getCo_postal().toUpperCase());
         }
     }
@@ -105,97 +104,124 @@ public class Model_Community implements Comparable<Model_Community> {
     public int getCo_id() {
         return co_id;
     }
+
     public void setCo_id(int co_id) {
         this.co_id = co_id;
     }
+
     //LOCALITY
     public String getCo_locality() {
         return co_locality;
     }
+
     public void setCo_locality(String co_locality) {
         this.co_locality = co_locality;
     }
+
     //MUNICIPALITY
     public String getCo_municipality() {
         return co_municipality;
     }
+
     public void setCo_municipality(String co_municipality) {
         this.co_municipality = co_municipality;
     }
+
     //ADDRESS
     public String getCo_address() {
         return co_address;
     }
+
     public void setCo_address(String co_address) {
         this.co_address = co_address;
     }
+
     //NUMBER
     public String getCo_number() {
         return co_number;
     }
+
     public void setCo_number(String co_number) {
         this.co_number = co_number;
     }
+
     //BLOCK
     public String getCo_block() {
         return co_block;
     }
+
     public void setCo_block(String co_block) {
         this.co_block = co_block;
     }
+
     //POSTAL
     public String getCo_postal() {
         return co_postal;
     }
+
     public void setCo_postal(String co_postal) {
         this.co_postal = co_postal;
     }
+
     //APARTMENTS
     public int getCo_apartments() {
         return co_apartments;
     }
+
     public void setCo_apartments(int co_apartments) {
         this.co_apartments = co_apartments;
     }
+
     //ADMIN NAME
     public String getCo_admin_name() {
         return co_admin_name;
     }
+
     public void setCo_admin_name(String co_admin_name) {
         this.co_admin_name = co_admin_name;
     }
+
     //ADMIN ADDRESS
     public String getCo_admin_address() {
         return co_admin_address;
     }
+
     public void setCo_admin_address(String co_admin_address) {
         this.co_admin_address = co_admin_address;
     }
+
     //ADMIN PHONE
     public String getCo_admin_phone() {
         return co_admin_phone;
     }
+
     public void setCo_admin_phone(String co_admin_phone) {
         this.co_admin_phone = co_admin_phone;
     }
+
     //ADMIN MAIL
     public String getCo_admin_mail() {
         return co_admin_mail;
     }
+
     public void setCo_admin_mail(String co_admin_mail) {
         this.co_admin_mail = co_admin_mail;
     }
+
     //PRESIDENT NAME
     public String getCo_president_name() {
         return co_president_name;
     }
+
     public void setCo_president_name(String co_president_name) {
         this.co_president_name = co_president_name;
     }
+
     //PRESIDENT PHONE
     public String getCo_president_phone() {
         return co_president_phone;
     }
+
     public void setCo_president_phone(String co_president_phone) {
         this.co_president_phone = co_president_phone;
     }
@@ -227,6 +253,13 @@ public class Model_Community implements Comparable<Model_Community> {
         @Override
         public int compare(Model_Community o1, Model_Community o2) {
             return o2.getCo_locality().toUpperCase().compareTo(o1.getCo_locality().toUpperCase());
+        }
+    };
+    //MUNICIPALITY
+    public static final Comparator<Model_Community> COMPARATOR_COMMUNITY_MUNICIPALITY_ASC = new Comparator<Model_Community>() {
+        @Override
+        public int compare(Model_Community o1, Model_Community o2) {
+            return o1.getCo_municipality().toUpperCase().compareTo(o2.getCo_municipality().toUpperCase());
         }
     };
     public static final Comparator<Model_Community> COMPARATOR_COMMUNITY_MUNICIPALITY_DES = new Comparator<Model_Community>() {

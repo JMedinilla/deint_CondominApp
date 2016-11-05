@@ -1,11 +1,12 @@
 package com.jmedinilla.pi.condominapp.models;
 
 import android.support.annotation.NonNull;
+
 import java.util.Comparator;
 
 /**
  * Class created by JMedinilla on 2016-10-29
- *
+ * <p>
  * BD document
  */
 public class Model_Document implements Comparable<Model_Document> {
@@ -31,7 +32,7 @@ public class Model_Document implements Comparable<Model_Document> {
         if (obj != null) {
             //The object has to be a Document
             if (obj instanceof Model_Document) {
-                Model_Document another = (Model_Document)obj;
+                Model_Document another = (Model_Document) obj;
                 //If the Title and Link are equals, it's the same document
                 if (this.do_title.toUpperCase().equals(another.do_title.toUpperCase())
                         && this.do_link.toUpperCase().equals(another.do_link.toUpperCase())) {
@@ -49,6 +50,7 @@ public class Model_Document implements Comparable<Model_Document> {
 
     /**
      * Document comparable method
+     *
      * @param another Document to compare
      * @return Wich one is higher
      */
@@ -57,12 +59,10 @@ public class Model_Document implements Comparable<Model_Document> {
         if (this.getDo_title().toUpperCase().compareTo(another.getDo_title().toUpperCase()) == 0) {
             if (this.getDo_link().toUpperCase().compareTo(another.getDo_link().toUpperCase()) == 0) {
                 return this.getDo_description().toUpperCase().compareTo(another.getDo_description().toUpperCase());
-            }
-            else {
+            } else {
                 return this.getDo_link().toUpperCase().compareTo(another.getDo_link().toUpperCase());
             }
-        }
-        else {
+        } else {
             return this.getDo_title().toUpperCase().compareTo(another.getDo_title().toUpperCase());
         }
     }
@@ -74,34 +74,43 @@ public class Model_Document implements Comparable<Model_Document> {
     public int getDo_id() {
         return do_id;
     }
+
     public void setDo_id(int do_id) {
         this.do_id = do_id;
     }
+
     //COMMUNITY
     public int getDo_community() {
         return do_community;
     }
+
     public void setDo_community(int do_community) {
         this.do_community = do_community;
     }
+
     //TITLE
     public String getDo_title() {
         return do_title;
     }
+
     public void setDo_title(String do_title) {
         this.do_title = do_title;
     }
+
     //DESCRIPTION
     public String getDo_description() {
         return do_description;
     }
+
     public void setDo_description(String do_description) {
         this.do_description = do_description;
     }
+
     //LINK
     public String getDo_link() {
         return do_link;
     }
+
     public void setDo_link(String do_link) {
         this.do_link = do_link;
     }

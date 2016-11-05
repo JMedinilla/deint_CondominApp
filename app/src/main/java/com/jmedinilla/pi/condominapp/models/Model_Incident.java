@@ -1,12 +1,14 @@
 package com.jmedinilla.pi.condominapp.models;
 
+import android.support.annotation.NonNull;
+
 import java.sql.Blob;
 import java.util.Comparator;
 import java.util.Date;
 
 /**
  * Class created by JMedinilla on 2016-10-29
- *
+ * <p>
  * BD incident
  */
 public class Model_Incident implements Comparable<Model_Incident> {
@@ -34,7 +36,7 @@ public class Model_Incident implements Comparable<Model_Incident> {
         if (obj != null) {
             //The object has to be an Incident
             if (obj instanceof Model_Incident) {
-                Model_Incident another = (Model_Incident)obj;
+                Model_Incident another = (Model_Incident) obj;
                 //If the Title is equal, it's the same incident
                 if (this.in_title.toUpperCase().equals(another.in_title.toUpperCase())) {
                     result = true;
@@ -51,20 +53,19 @@ public class Model_Incident implements Comparable<Model_Incident> {
 
     /**
      * Incident comparable method
+     *
      * @param another Incident to compare
      * @return Wich one is higher
      */
     @Override
-    public int compareTo(Model_Incident another) {
+    public int compareTo(@NonNull Model_Incident another) {
         if (this.getIn_title().toUpperCase().compareTo(another.getIn_title().toUpperCase()) == 0) {
             if (this.getIn_date().compareTo(another.getIn_date()) == 0) {
                 return this.getIn_description().toUpperCase().compareTo(another.getIn_description().toUpperCase());
-            }
-            else {
+            } else {
                 return this.getIn_date().compareTo(another.getIn_date());
             }
-        }
-        else {
+        } else {
             return this.getIn_title().toUpperCase().compareTo(another.getIn_title().toUpperCase());
         }
     }
@@ -76,41 +77,52 @@ public class Model_Incident implements Comparable<Model_Incident> {
     public int getIn_id() {
         return in_id;
     }
+
     public void setIn_id(int in_id) {
         this.in_id = in_id;
     }
+
     //USER
     public Model_User getIn_user() {
         return in_user;
     }
+
     public void setIn_user(Model_User in_user) {
         this.in_user = in_user;
     }
+
     //DATE
     public Date getIn_date() {
         return in_date;
     }
+
     public void setIn_date(Date in_date) {
         this.in_date = in_date;
     }
+
     //TITLE
     public String getIn_title() {
         return in_title;
     }
+
     public void setIn_title(String in_title) {
         this.in_title = in_title;
     }
+
     //DESCRIPTION
     public String getIn_description() {
         return in_description;
     }
+
     public void setIn_description(String in_description) {
         this.in_description = in_description;
     }
+
     //PHOTO
     public Blob getIn_photo() {
         return in_photo;
     }
+
     public void setIn_photo(Blob in_photo) {
         this.in_photo = in_photo;
     }
