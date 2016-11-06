@@ -43,6 +43,8 @@ public class Activity_Main_List_Documents extends AppCompatActivity {
                 intent = new Intent(Activity_Main_List_Documents.this, Form_Documents.class);
                 startActivity(intent);
                 break;
+            case R.id.action_documents_sortTitle:
+                break;
         }
         return super.onOptionsItemSelected(item);
     }

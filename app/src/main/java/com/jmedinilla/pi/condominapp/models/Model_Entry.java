@@ -157,17 +157,4 @@ public class Model_Entry implements Comparable<Model_Entry> {
             return o2.getEn_date().compareTo(o1.getEn_date());
         }
     };
-    //CATEGORY
-    public static final Comparator<Model_Entry> COMPARATOR_ENTRY_CATEGORY_ASC = new Comparator<Model_Entry>() {
-        @Override
-        public int compare(Model_Entry o1, Model_Entry o2) {
-            return o1.getEn_category() - o2.getEn_category();
-        }
-    };
-    public static final Comparator<Model_Entry> COMPARATOR_ENTRY_CATEGORY_DES = new Comparator<Model_Entry>() {
-        @Override
-        public int compare(Model_Entry o1, Model_Entry o2) {
-            return o2.getEn_category() - o1.getEn_category();
-        }
-    };
 }

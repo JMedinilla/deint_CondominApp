@@ -43,6 +43,8 @@ public class Activity_Main_List_Meetings extends AppCompatActivity {
                 intent = new Intent(Activity_Main_List_Meetings.this, Form_Meetings.class);
                 startActivity(intent);
                 break;
+            case R.id.action_meetings_sortDate:
+                break;
         }
         return super.onOptionsItemSelected(item);
     }

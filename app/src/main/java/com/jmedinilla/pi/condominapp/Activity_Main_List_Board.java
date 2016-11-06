@@ -43,6 +43,10 @@ public class Activity_Main_List_Board extends AppCompatActivity {
                 intent = new Intent(Activity_Main_List_Board.this, Form_Board.class);
                 startActivity(intent);
                 break;
+            case R.id.action_board_sortDate:
+                break;
+            case R.id.action_board_sortTitle:
+                break;
         }
         return super.onOptionsItemSelected(item);
     }

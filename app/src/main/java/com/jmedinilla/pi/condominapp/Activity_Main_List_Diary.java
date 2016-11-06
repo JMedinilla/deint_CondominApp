@@ -43,6 +43,10 @@ public class Activity_Main_List_Diary extends AppCompatActivity {
                 intent = new Intent(Activity_Main_List_Diary.this, Form_Diary.class);
                 startActivity(intent);
                 break;
+            case R.id.action_diary_sortDate:
+                break;
+            case R.id.action_diary_sortTitle:
+                break;
         }
         return super.onOptionsItemSelected(item);
     }

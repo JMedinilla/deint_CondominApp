@@ -7,6 +7,20 @@
         android:icon="@android:drawable/ic_menu_add"
         android:orderInCategory="1"
         android:title="@string/action_diary_add"
-        app:showAsAction="always" />
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_diary_sortDate"
+        android:icon="@android:drawable/ic_menu_sort_by_size"
+        android:orderInCategory="2"
+        android:title="@string/action_diary_sortDate"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_diary_sortTitle"
+        android:icon="@android:drawable/ic_menu_sort_by_size"
+        android:orderInCategory="3"
+        android:title="@string/action_diary_sortTitle"
+        app:showAsAction="never" />
 
 </menu>

@@ -43,6 +43,10 @@ public class Activity_Main_List_Incidents extends AppCompatActivity {
                 intent = new Intent(Activity_Main_List_Incidents.this, Form_Incidents.class);
                 startActivity(intent);
                 break;
+            case R.id.action_incidents_sortDate:
+                break;
+            case R.id.action_incidents_sortTitle:
+                break;
         }
         return super.onOptionsItemSelected(item);
     }
