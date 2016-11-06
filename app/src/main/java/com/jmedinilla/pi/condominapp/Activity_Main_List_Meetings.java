@@ -40,8 +40,8 @@ public class Activity_Main_List_Meetings extends AppCompatActivity {
         Intent intent;
         switch (item.getItemId()) {
             case R.id.action_meetings_add:
-                //intent = new Intent(Activity_Main_List_Meetings.this, [FORMULARIO].class);
-                //startActivity(intent);
+                intent = new Intent(Activity_Main_List_Meetings.this, Form_Meetings.class);
+                startActivity(intent);
                 break;
         }
         return super.onOptionsItemSelected(item);

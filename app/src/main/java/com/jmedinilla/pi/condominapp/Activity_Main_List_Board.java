@@ -40,8 +40,8 @@ public class Activity_Main_List_Board extends AppCompatActivity {
         Intent intent;
         switch (item.getItemId()) {
             case R.id.action_board_add:
-                //intent = new Intent(Activity_Main_List_Board.this, [FORMULARIO].class);
-                //startActivity(intent);
+                intent = new Intent(Activity_Main_List_Board.this, Form_Board.class);
+                startActivity(intent);
                 break;
         }
         return super.onOptionsItemSelected(item);

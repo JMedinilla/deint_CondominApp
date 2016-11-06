@@ -40,8 +40,8 @@ public class Activity_Main_List_Diary extends AppCompatActivity {
         Intent intent;
         switch (item.getItemId()) {
             case R.id.action_diary_add:
-                //intent = new Intent(Activity_Main_List_Diary.this, [FORMULARIO].class);
-                //startActivity(intent);
+                intent = new Intent(Activity_Main_List_Diary.this, Form_Diary.class);
+                startActivity(intent);
                 break;
         }
         return super.onOptionsItemSelected(item);

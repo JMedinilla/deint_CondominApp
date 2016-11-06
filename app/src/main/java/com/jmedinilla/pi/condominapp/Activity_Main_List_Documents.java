@@ -40,8 +40,8 @@ public class Activity_Main_List_Documents extends AppCompatActivity {
         Intent intent;
         switch (item.getItemId()) {
             case R.id.action_documents_add:
-                //intent = new Intent(Activity_Main_List_Documents.this, [FORMULARIO].class);
-                //startActivity(intent);
+                intent = new Intent(Activity_Main_List_Documents.this, Form_Documents.class);
+                startActivity(intent);
                 break;
         }
         return super.onOptionsItemSelected(item);

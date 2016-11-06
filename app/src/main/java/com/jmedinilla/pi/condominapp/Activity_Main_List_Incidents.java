@@ -40,8 +40,8 @@ public class Activity_Main_List_Incidents extends AppCompatActivity {
         Intent intent;
         switch (item.getItemId()) {
             case R.id.action_incidents_add:
-                //intent = new Intent(Activity_Main_List_Incidents.this, [FORMULARIO].class);
-                //startActivity(intent);
+                intent = new Intent(Activity_Main_List_Incidents.this, Form_Incidents.class);
+                startActivity(intent);
                 break;
         }
         return super.onOptionsItemSelected(item);

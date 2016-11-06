@@ -63,7 +63,7 @@ public class Activity_Home extends AppCompatActivity {
                 startActivity(new Intent(Activity_Home.this, Activity_Main_List_Board.class));
                 break;
             case R.id.home_btnMenu_BoardCommunity:
-                startActivity(new Intent(Activity_Home.this, Activity_Main_List_Board_Communitary.class));
+                startActivity(new Intent(Activity_Home.this, Activity_Main_List_Board_Community.class));
                 break;
             case R.id.home_btnMenu_Document:
                 startActivity(new Intent(Activity_Home.this, Activity_Main_List_Documents.class));

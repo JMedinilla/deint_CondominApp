@@ -9,7 +9,6 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
         <activity
             android:name=".Activity_SplashScreen"
             android:screenOrientation="portrait"
@@ -20,35 +19,27 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity android:name=".Activity_Login_Main" />
-
         <activity android:name=".Activity_Login_Information" />
-
         <activity android:name=".Activity_Login_Admin" />
-
         <activity
             android:name=".Activity_Home"
             android:screenOrientation="portrait" />
-
         <activity android:name=".Activity_Main_List_Incidents" />
-
         <activity android:name=".Activity_Main_List_Diary" />
-
         <activity android:name=".Activity_Main_List_Board" />
-
-        <activity android:name=".Activity_Main_List_Board_Communitary" />
-
+        <activity android:name=".Activity_Main_List_Board_Community" />
         <activity android:name=".Activity_Main_List_Documents" />
-
         <activity android:name=".Activity_Main_List_Meetings" />
-
         <activity android:name=".Activity_Main_Information" />
-
         <activity android:name=".Activity_Main_Profile" />
-
         <activity android:name=".Activity_Main_Settings" />
-
+        <activity android:name=".Form_Board" />
+        <activity android:name=".Form_Board_Community" />
+        <activity android:name=".Form_Diary" />
+        <activity android:name=".Form_Documents" />
+        <activity android:name=".Form_Incidents" />
+        <activity android:name=".Form_Meetings"></activity>
     </application>
 
 </manifest>

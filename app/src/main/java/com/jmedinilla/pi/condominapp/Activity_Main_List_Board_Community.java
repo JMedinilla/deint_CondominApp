@@ -9,7 +9,7 @@ import android.view.MenuItem;
 import android.widget.AutoCompleteTextView;
 import android.widget.RelativeLayout;
 
-public class Activity_Main_List_Board_Communitary extends AppCompatActivity {
+public class Activity_Main_List_Board_Community extends AppCompatActivity {
 
     private RelativeLayout main_board_community;
     private AutoCompleteTextView main_cboard_atxtSearch;
@@ -40,8 +40,8 @@ public class Activity_Main_List_Board_Communitary extends AppCompatActivity {
         Intent intent;
         switch (item.getItemId()) {
             case R.id.action_cboard_add:
-                //intent = new Intent(Activity_Main_List_Board_Communitary.this, [FORMULARIO].class);
-                //startActivity(intent);
+                intent = new Intent(Activity_Main_List_Board_Community.this, Form_Board_Community.class);
+                startActivity(intent);
                 break;
         }
         return super.onOptionsItemSelected(item);
