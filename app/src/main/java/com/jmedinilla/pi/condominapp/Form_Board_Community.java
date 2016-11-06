@@ -5,7 +5,7 @@ import android.os.Bundle;
 
 /**
  * Class created by JMedinilla on 2016-11-06
- *
+ * <p>
  * Form for community board
  */
 public class Form_Board_Community extends AppCompatActivity {

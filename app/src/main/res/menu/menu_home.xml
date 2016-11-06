@@ -3,15 +3,21 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        android:id="@+id/action_profile"
+        android:id="@+id/action_home_profile"
         android:orderInCategory="1"
         android:title="@string/action_profile"
         app:showAsAction="never" />
 
     <item
-        android:id="@+id/action_settings"
+        android:id="@+id/action_home_settings"
         android:orderInCategory="2"
         android:title="@string/action_settings"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_home_about"
+        android:orderInCategory="3"
+        android:title="@string/action_about"
         app:showAsAction="never" />
 
 </menu>

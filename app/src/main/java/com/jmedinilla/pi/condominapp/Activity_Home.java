@@ -1,8 +1,11 @@
 package com.jmedinilla.pi.condominapp;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -33,13 +36,27 @@ public class Activity_Home extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         Intent intent;
         switch (item.getItemId()) {
-            case R.id.action_profile:
+            case R.id.action_home_profile:
                 intent = new Intent(Activity_Home.this, Activity_Main_Profile.class);
                 startActivity(intent);
                 break;
-            case R.id.action_settings:
+            case R.id.action_home_settings:
                 intent = new Intent(Activity_Home.this, Activity_Main_Settings.class);
                 startActivity(intent);
+                break;
+            case R.id.action_home_about:
+                final AlertDialog.Builder builder = new AlertDialog.Builder(Activity_Home.this);
+                LayoutInflater inflater = getLayoutInflater();
+                View dialoglayout = inflater.inflate(R.layout.dialog_about, null);
+                builder.setTitle("About...").setCancelable(false);
+                builder.setView(dialoglayout);
+                builder.setPositiveButton(R.string.about_btnClose, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        //
+                    }
+                });
+                builder.show();
                 break;
         }
         return super.onOptionsItemSelected(item);
