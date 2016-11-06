@@ -11,9 +11,26 @@
     tools:context="com.jmedinilla.pi.condominapp.Activity_Main_List_Documents">
 
     <TextView
+        android:id="@+id/main_documents_txtTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="6dp"
+        android:text="@string/main_documents_txtTitle"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="22sp" />
+
+    <AutoCompleteTextView
+        android:id="@+id/main_documents_atxtSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/main_documents_txtTitle"
+        android:labelFor="@+id/main_documents_atxtSearch" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/main_documents_rcvDocuments"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center"
-        android:text="@string/placeholder" />
+        android:layout_below="@+id/main_documents_atxtSearch" />
 
 </RelativeLayout>

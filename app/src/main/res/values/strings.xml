@@ -40,4 +40,12 @@
     <string name="about_description">CondominApp creator</string>
     <string name="about_title">Javier Medinilla</string>
     <string name="about_btnClose">CLOSE</string>
+
+    <!-- Main List -->
+    <string name="main_board_txtTitle">Board</string>
+    <string name="main_cboard_txtTitle">Community Board</string>
+    <string name="main_diary_txtTitle">Diary</string>
+    <string name="main_documents_txtTitle">Documents</string>
+    <string name="main_incidents_txtTitle">Incidents</string>
+    <string name="main_meetings_txtTitle">Meetings</string>
 </resources>
