@@ -31,11 +31,19 @@ public class Activity_Main_List_Documents extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_documents, menu);
         return super.onCreateOptionsMenu(menu);
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
+        Intent intent;
+        switch (item.getItemId()) {
+            case R.id.action_documents_add:
+                //intent = new Intent(Activity_Main_List_Documents.this, [FORMULARIO].class);
+                //startActivity(intent);
+                break;
+        }
         return super.onOptionsItemSelected(item);
     }
 

@@ -31,11 +31,19 @@ public class Activity_Main_List_Incidents extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_incidents, menu);
         return super.onCreateOptionsMenu(menu);
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
+        Intent intent;
+        switch (item.getItemId()) {
+            case R.id.action_incidents_add:
+                //intent = new Intent(Activity_Main_List_Incidents.this, [FORMULARIO].class);
+                //startActivity(intent);
+                break;
+        }
         return super.onOptionsItemSelected(item);
     }
 

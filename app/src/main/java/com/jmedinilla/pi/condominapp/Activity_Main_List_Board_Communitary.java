@@ -31,11 +31,19 @@ public class Activity_Main_List_Board_Communitary extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_cboard, menu);
         return super.onCreateOptionsMenu(menu);
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
+        Intent intent;
+        switch (item.getItemId()) {
+            case R.id.action_cboard_add:
+                //intent = new Intent(Activity_Main_List_Board_Communitary.this, [FORMULARIO].class);
+                //startActivity(intent);
+                break;
+        }
         return super.onOptionsItemSelected(item);
     }
 
