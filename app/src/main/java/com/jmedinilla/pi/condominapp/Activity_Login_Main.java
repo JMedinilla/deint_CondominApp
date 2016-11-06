@@ -1,11 +1,14 @@
 package com.jmedinilla.pi.condominapp;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.TextInputLayout;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -38,7 +41,18 @@ public class Activity_Login_Main extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.action_about:
-                //
+                final AlertDialog.Builder builder = new AlertDialog.Builder(Activity_Login_Main.this);
+                LayoutInflater inflater = getLayoutInflater();
+                View dialoglayout = inflater.inflate(R.layout.dialog_about, null);
+                builder.setTitle("About...").setCancelable(false);
+                builder.setView(dialoglayout);
+                builder.setPositiveButton(R.string.about_btnClose, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        //
+                    }
+                });
+                builder.show();
                 break;
         }
         return super.onOptionsItemSelected(item);
