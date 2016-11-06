@@ -5,6 +5,7 @@ import android.support.annotation.NonNull;
 import java.sql.Blob;
 import java.util.Comparator;
 import java.util.Date;
+import java.util.UUID;
 
 /**
  * Class created by JMedinilla on 2016-10-29
@@ -12,16 +13,16 @@ import java.util.Date;
  * BD incident
  */
 public class Model_Incident implements Comparable<Model_Incident> {
-    private int in_id;
+    private String in_id;
     private Model_User in_user;
     private Date in_date;
     private String in_title;
     private String in_description;
     private Blob in_photo;
 
-    public Model_Incident(int in_id, Model_User in_user, Date in_date,
+    public Model_Incident(Model_User in_user, Date in_date,
                           String in_title, String in_description, Blob in_photo) {
-        this.in_id = in_id;
+        this.in_id = UUID.randomUUID().toString();
         this.in_user = in_user;
         this.in_date = in_date;
         this.in_title = in_title;
@@ -74,11 +75,11 @@ public class Model_Incident implements Comparable<Model_Incident> {
      * Incident getters and setters
      */
     //ID
-    public int getIn_id() {
+    public String getIn_id() {
         return in_id;
     }
 
-    public void setIn_id(int in_id) {
+    public void setIn_id(String in_id) {
         this.in_id = in_id;
     }
 

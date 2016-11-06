@@ -4,6 +4,7 @@ import android.support.annotation.NonNull;
 
 import java.util.Comparator;
 import java.util.Date;
+import java.util.UUID;
 
 /**
  * Class created by JMedinilla on 2016-10-29
@@ -11,16 +12,16 @@ import java.util.Date;
  * BD entry for a board
  */
 public class Model_Entry implements Comparable<Model_Entry> {
-    private int en_id;
+    private String en_id;
     private Model_User en_user;
     private String en_title;
     private String en_content;
     private Date en_date;
     private int en_category;
 
-    public Model_Entry(int en_id, Model_User en_user, String en_title,
+    public Model_Entry(Model_User en_user, String en_title,
                        String en_content, Date en_date, int en_category) {
-        this.en_id = en_id;
+        this.en_id = UUID.randomUUID().toString();
         this.en_user = en_user;
         this.en_title = en_title;
         this.en_content = en_content;
@@ -74,11 +75,11 @@ public class Model_Entry implements Comparable<Model_Entry> {
      * Entry getters and setters
      */
     //ID
-    public int getEn_id() {
+    public String getEn_id() {
         return en_id;
     }
 
-    public void setEn_id(int en_id) {
+    public void setEn_id(String en_id) {
         this.en_id = en_id;
     }
 

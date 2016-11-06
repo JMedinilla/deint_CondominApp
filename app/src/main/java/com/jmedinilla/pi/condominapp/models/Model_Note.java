@@ -4,6 +4,7 @@ import android.support.annotation.NonNull;
 
 import java.util.Comparator;
 import java.util.Date;
+import java.util.UUID;
 
 /**
  * Class created by JMedinilla on 2016-10-29
@@ -11,15 +12,15 @@ import java.util.Date;
  * BD note for the community diary
  */
 public class Model_Note implements Comparable<Model_Note> {
-    private int no_id;
+    private String no_id;
     private int no_community;
     private Date no_date;
     private String no_title;
     private String no_content;
 
-    public Model_Note(int no_id, int no_community, Date no_date,
+    public Model_Note(int no_community, Date no_date,
                       String no_title, String no_content) {
-        this.no_id = no_id;
+        this.no_id = UUID.randomUUID().toString();
         this.no_community = no_community;
         this.no_date = no_date;
         this.no_title = no_title;
@@ -64,11 +65,11 @@ public class Model_Note implements Comparable<Model_Note> {
      * Note getters and setters
      */
     //ID
-    public int getNo_id() {
+    public String getNo_id() {
         return no_id;
     }
 
-    public void setNo_id(int no_id) {
+    public void setNo_id(String no_id) {
         this.no_id = no_id;
     }
 

@@ -3,6 +3,7 @@ package com.jmedinilla.pi.condominapp.models;
 import android.support.annotation.NonNull;
 
 import java.util.Comparator;
+import java.util.UUID;
 
 /**
  * Class created by JMedinilla on 2016-10-29
@@ -10,13 +11,13 @@ import java.util.Comparator;
  * BD point of a meeting
  */
 public class Model_Point implements Comparable<Model_Point> {
-    private int po_id;
+    private String po_id;
     private int po_meeting;
     private String po_title;
     private String po_content;
 
-    public Model_Point(int po_id, int po_meeting, String po_title, String po_content) {
-        this.po_id = po_id;
+    public Model_Point(int po_meeting, String po_title, String po_content) {
+        this.po_id = UUID.randomUUID().toString();
         this.po_meeting = po_meeting;
         this.po_title = po_title;
         this.po_content = po_content;
@@ -59,11 +60,11 @@ public class Model_Point implements Comparable<Model_Point> {
      * Point getters and setters
      */
     //ID
-    public int getPo_id() {
+    public String getPo_id() {
         return po_id;
     }
 
-    public void setPo_id(int po_id) {
+    public void setPo_id(String po_id) {
         this.po_id = po_id;
     }
 

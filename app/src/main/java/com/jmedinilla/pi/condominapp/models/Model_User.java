@@ -3,6 +3,7 @@ package com.jmedinilla.pi.condominapp.models;
 import android.support.annotation.NonNull;
 
 import java.util.Comparator;
+import java.util.UUID;
 
 /**
  * Class created by JMedinilla on 2016-10-29
@@ -10,7 +11,7 @@ import java.util.Comparator;
  * BD user
  */
 public class Model_User implements Comparable<Model_User> {
-    private int us_id;
+    private String us_id;
     private int us_community;
     private String us_floor;
     private String us_door;
@@ -19,10 +20,10 @@ public class Model_User implements Comparable<Model_User> {
     private String us_name;
     private int us_category;
 
-    public Model_User(int us_id, int us_community, String us_floor,
+    public Model_User(int us_community, String us_floor,
                       String us_door, String us_phone, String us_mail,
                       String us_name, int us_category) {
-        this.us_id = us_id;
+        this.us_id = UUID.randomUUID().toString();
         this.us_community = us_community;
         this.us_floor = us_floor;
         this.us_door = us_door;
@@ -73,11 +74,11 @@ public class Model_User implements Comparable<Model_User> {
      * User getters and setters
      */
     //ID
-    public int getUs_id() {
+    public String getUs_id() {
         return us_id;
     }
 
-    public void setUs_id(int us_id) {
+    public void setUs_id(String us_id) {
         this.us_id = us_id;
     }
 

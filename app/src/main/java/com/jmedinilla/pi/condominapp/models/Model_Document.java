@@ -3,6 +3,7 @@ package com.jmedinilla.pi.condominapp.models;
 import android.support.annotation.NonNull;
 
 import java.util.Comparator;
+import java.util.UUID;
 
 /**
  * Class created by JMedinilla on 2016-10-29
@@ -10,15 +11,15 @@ import java.util.Comparator;
  * BD document
  */
 public class Model_Document implements Comparable<Model_Document> {
-    private int do_id;
+    private String do_id;
     private int do_community;
     private String do_title;
     private String do_description;
     private String do_link;
 
-    public Model_Document(int do_id, int do_community,
+    public Model_Document(int do_community,
                           String do_title, String do_description, String do_link) {
-        this.do_id = do_id;
+        this.do_id = UUID.randomUUID().toString();
         this.do_community = do_community;
         this.do_title = do_title;
         this.do_description = do_description;
@@ -71,11 +72,11 @@ public class Model_Document implements Comparable<Model_Document> {
      * Document getters and setters
      */
     //ID
-    public int getDo_id() {
+    public String getDo_id() {
         return do_id;
     }
 
-    public void setDo_id(int do_id) {
+    public void setDo_id(String do_id) {
         this.do_id = do_id;
     }
 

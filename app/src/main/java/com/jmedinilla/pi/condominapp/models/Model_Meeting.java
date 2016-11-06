@@ -4,6 +4,7 @@ import android.support.annotation.NonNull;
 
 import java.util.Comparator;
 import java.util.Date;
+import java.util.UUID;
 
 /**
  * Class created by JMedinilla on 2016-10-29
@@ -11,12 +12,12 @@ import java.util.Date;
  * BD meeting
  */
 public class Model_Meeting implements Comparable<Model_Meeting> {
-    private int me_id;
+    private String me_id;
     private int me_community;
     private Date me_date;
 
-    public Model_Meeting(int me_id, int me_community, Date me_date) {
-        this.me_id = me_id;
+    public Model_Meeting(int me_community, Date me_date) {
+        this.me_id = UUID.randomUUID().toString();
         this.me_community = me_community;
         this.me_date = me_date;
     }
@@ -58,11 +59,11 @@ public class Model_Meeting implements Comparable<Model_Meeting> {
      * Meeting getters and setters
      */
     //ID
-    public int getMe_id() {
+    public String getMe_id() {
         return me_id;
     }
 
-    public void setMe_id(int me_id) {
+    public void setMe_id(String me_id) {
         this.me_id = me_id;
     }
 
