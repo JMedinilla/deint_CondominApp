@@ -1,4 +1,23 @@
 <resources>
+    <string name="placeholder">[PLACEHOLDER]</string>
     <string name="app_name">CondominApp</string>
-    <string name="contentdescription_splashscreen_imglogo">contentDescription_splashscreen_imgLogo</string>
+    <string name="contentdescription_imageview">contentDescription_imageview</string>
+    <string name="login_main_txtTitle">CONDOMINAPP</string>
+    <string name="login_main_txtWelcome">Welcome to CondominApp</string>
+    <string name="login_main_txtInfo">Use the password given by your \nadministrator to join:</string>
+    <string name="login_main_btnScan">QR</string>
+    <string name="login_main_btnJoin">Join</string>
+    <string name="login_main_btnLost">Key lost</string>
+    <string name="login_main_edtKey">Access key</string>
+    <string name="login_info_txtTitle">CONDOMINAPP</string>
+    <string name="login_info_txtWelcome">Welcome to CondominApp</string>
+    <string name="login_info_txtInfo">Contact the administrator to retrieve the key</string>
+    <string name="login_info_txtMail">Mail:</string>
+    <string name="login_info_txtPhone">Phone:</string>
+    <string name="login_info_btnClose">Close</string>
+    <string name="login_admin_txtTitle">CONDOMINAPP</string>
+    <string name="login_admin_txtWelcome">Welcome to CondominApp</string>
+    <string name="login_admin_txtInfo">Choose a community:</string>
+    <string name="home_txtTitle">CONDOMINAPP</string>
+    <string name="home_txtWelcome">Welcome to CondominApp</string>
 </resources>

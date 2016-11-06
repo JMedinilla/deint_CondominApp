@@ -8,8 +8,16 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
-    <style name="SplashScreen" parent="Theme.AppCompat.Light.NoActionBar">
+    <style name="NoActionBar" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <style name="error" parent="TextAppearance.AppCompat.Caption">
+        <item name="android:textColor">@color/colorError</item>
+    </style>
+
+    <style name="hint" parent="TextAppearance.Design.Hint">
+        <item name="android:textColor">@color/colorAccent</item>
     </style>
 
 </resources>

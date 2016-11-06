@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_login_main"
     android:layout_width="match_parent"
@@ -9,5 +10,111 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.jmedinilla.pi.condominapp.Activity_Login_Main">
+
+    <TextView
+        android:id="@+id/login_main_txtTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="8dp"
+        android:text="@string/login_main_txtTitle"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="28sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/login_main_imgLogo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@id/login_main_txtTitle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="8dp"
+        android:contentDescription="@string/contentdescription_imageview"
+        app:srcCompat="@drawable/jm_logo" />
+
+    <TextView
+        android:id="@+id/login_main_txtWelcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/login_main_imgLogo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp"
+        android:text="@string/login_main_txtWelcome"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/login_main_txtInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/login_main_txtWelcome"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="28sp"
+        android:text="@string/login_main_txtInfo"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="16sp" />
+
+    <LinearLayout
+        android:id="@+id/login_main_linearGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/login_main_txtInfo"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/login_main_tilKey"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:errorEnabled="true"
+            app:errorTextAppearance="@style/error"
+            app:hintEnabled="true"
+            app:hintTextAppearance="@style/hint">
+
+            <EditText
+                android:id="@+id/login_main_edtKey"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/login_main_edtKey"
+                android:inputType="text"
+                android:textColor="@color/colorPrimary" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <Button
+            android:id="@+id/login_main_btnScan"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:drawableStart="@android:drawable/ic_menu_camera"
+            android:onClick="getOnClickLoginMain"
+            android:text="@string/login_main_btnScan" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/login_main_btnJoin"
+        style="?android:attr/buttonBarButtonStyle"
+        android:layout_width="240dp"
+        android:layout_height="38dp"
+        android:layout_below="@id/login_main_linearGroup"
+        android:layout_centerHorizontal="true"
+        android:onClick="getOnClickLoginMain"
+        android:text="@string/login_main_btnJoin" />
+
+    <Button
+        android:id="@+id/login_main_btnLost"
+        style="?android:attr/buttonBarButtonStyle"
+        android:layout_width="240dp"
+        android:layout_height="38dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:enabled="false"
+        android:onClick="getOnClickLoginMain"
+        android:text="@string/login_main_btnLost" />
 
 </RelativeLayout>

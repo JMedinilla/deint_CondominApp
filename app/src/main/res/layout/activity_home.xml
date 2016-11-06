@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_home"
     android:layout_width="match_parent"
@@ -9,5 +10,141 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.jmedinilla.pi.condominapp.Activity_Home">
+
+    <ImageView
+        android:id="@+id/home_imgLogo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="8dp"
+        android:contentDescription="@string/contentdescription_imageview"
+        app:srcCompat="@drawable/jm_logo" />
+
+    <TextView
+        android:id="@+id/home_txtTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/home_imgLogo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="8dp"
+        android:text="@string/home_txtTitle"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="28sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/home_txtWelcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/home_imgLogo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp"
+        android:text="@string/home_txtWelcome"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="16sp" />
+
+    <com.github.clans.fab.FloatingActionMenu
+        android:id="@+id/home_btnMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        app:menu_animationDelayPerItem="55"
+        app:menu_backgroundColor="@android:color/transparent"
+        app:menu_buttonSpacing="0dp"
+        app:menu_colorNormal="@color/colorAccent"
+        app:menu_colorPressed="@color/colorError"
+        app:menu_colorRipple="@color/colorError"
+        app:menu_fab_label=""
+        app:menu_fab_size="normal"
+        app:menu_icon="@android:drawable/arrow_up_float"
+        app:menu_labels_colorNormal="#333"
+        app:menu_labels_colorPressed="#444"
+        app:menu_labels_colorRipple="#66efecec"
+        app:menu_labels_cornerRadius="3dp"
+        app:menu_labels_ellipsize="none"
+        app:menu_labels_hideAnimation="@anim/fab_slide_out_to_right"
+        app:menu_labels_margin="0dp"
+        app:menu_labels_maxLines="-1"
+        app:menu_labels_padding="8dp"
+        app:menu_labels_position="left"
+        app:menu_labels_showAnimation="@anim/fab_slide_in_from_right"
+        app:menu_labels_showShadow="true"
+        app:menu_labels_singleLine="false"
+        app:menu_labels_textColor="#f2f1f1"
+        app:menu_labels_textSize="15sp"
+        app:menu_openDirection="up"
+        app:menu_shadowColor="#66bc98f1"
+        app:menu_shadowRadius="4dp"
+        app:menu_shadowXOffset="1dp"
+        app:menu_shadowYOffset="4dp"
+        app:menu_showShadow="true">
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/home_btnMenu_Information"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="getOnClickHome"
+            android:src="@android:drawable/ic_menu_directions"
+            app:fab_label="     Information      "
+            app:fab_size="mini" />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/home_btnMenu_Meeting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="getOnClickHome"
+            android:src="@android:drawable/ic_menu_directions"
+            app:fab_label="         Meetings       "
+            app:fab_size="mini" />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/home_btnMenu_Document"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="getOnClickHome"
+            android:src="@android:drawable/ic_menu_directions"
+            app:fab_label="      Documents     "
+            app:fab_size="mini" />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/home_btnMenu_BoardCommunity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="getOnClickHome"
+            android:src="@android:drawable/ic_menu_directions"
+            app:fab_label="Community board"
+            app:fab_size="mini" />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/home_btnMenu_Board"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="getOnClickHome"
+            android:src="@android:drawable/ic_menu_directions"
+            app:fab_label="          Board             "
+            app:fab_size="mini" />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/home_btnMenu_Diary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="getOnClickHome"
+            android:src="@android:drawable/ic_menu_directions"
+            app:fab_label="           Diary             "
+            app:fab_size="mini" />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/home_btnMenu_Incident"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="getOnClickHome"
+            android:src="@android:drawable/ic_menu_directions"
+            app:fab_label="        Incidents        "
+            app:fab_size="mini" />
+
+
+    </com.github.clans.fab.FloatingActionMenu>
 
 </RelativeLayout>
