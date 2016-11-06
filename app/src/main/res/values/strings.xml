@@ -47,11 +47,17 @@
     <string name="about_title">Javier Medinilla</string>
     <string name="about_btnClose">CLOSE</string>
 
-    <!-- Main List Titles -->
+    <!-- Main List Titles and Hints-->
     <string name="main_board_txtTitle">Board</string>
     <string name="main_cboard_txtTitle">Community Board</string>
     <string name="main_diary_txtTitle">Diary</string>
     <string name="main_documents_txtTitle">Documents</string>
     <string name="main_incidents_txtTitle">Incidents</string>
     <string name="main_meetings_txtTitle">Meetings</string>
+    <string name="main_board_atxtSearch">Search…</string>
+    <string name="main_cboard_atxtSearch">Search…</string>
+    <string name="main_diary_atxtSearch">Search…</string>
+    <string name="main_documents_atxtSearch">Search…</string>
+    <string name="main_incidents_atxtSearch">Search…</string>
+    <string name="main_meetings_atxtSearch">Search…</string>
 </resources>
