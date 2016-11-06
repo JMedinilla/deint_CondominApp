@@ -3,6 +3,8 @@ package com.jmedinilla.pi.condominapp;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.RelativeLayout;
 
@@ -19,6 +21,28 @@ public class Activity_Home extends AppCompatActivity {
         setContentView(R.layout.activity_home);
 
         initializeComponents();
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_home, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        Intent intent;
+        switch (item.getItemId()) {
+            case R.id.action_profile:
+                intent = new Intent(Activity_Home.this, Activity_Main_Profile.class);
+                startActivity(intent);
+                break;
+            case R.id.action_settings:
+                intent = new Intent(Activity_Home.this, Activity_Main_Settings.class);
+                startActivity(intent);
+                break;
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     private void initializeComponents() {
