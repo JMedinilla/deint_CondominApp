@@ -30,7 +30,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="8dp"
         android:contentDescription="@string/contentdescription_imageview"
-        app:srcCompat="@drawable/jm_logo" />
+        app:srcCompat="@drawable/applogo" />
 
     <TextView
         android:id="@+id/login_main_txtWelcome"

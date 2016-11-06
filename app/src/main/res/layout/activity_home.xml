@@ -19,7 +19,7 @@
         android:layout_centerVertical="true"
         android:layout_marginBottom="8dp"
         android:contentDescription="@string/contentdescription_imageview"
-        app:srcCompat="@drawable/jm_logo" />
+        app:srcCompat="@drawable/applogo" />
 
     <TextView
         android:id="@+id/home_txtTitle"
@@ -58,7 +58,7 @@
         app:menu_colorRipple="@color/colorError"
         app:menu_fab_label=""
         app:menu_fab_size="normal"
-        app:menu_icon="@android:drawable/arrow_up_float"
+        app:menu_icon="@drawable/home_btnmenu"
         app:menu_labels_colorNormal="#333"
         app:menu_labels_colorPressed="#444"
         app:menu_labels_colorRipple="#66efecec"
