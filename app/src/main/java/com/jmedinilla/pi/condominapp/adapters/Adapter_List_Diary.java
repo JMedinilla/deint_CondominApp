@@ -31,7 +31,7 @@ public class Adapter_List_Diary extends RecyclerView.Adapter<Adapter_List_Diary.
 
     @Override
     public NoteViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View item = LayoutInflater.from(parent.getContext()).inflate(R.layout.row_diary_left, null);
+        View item = LayoutInflater.from(parent.getContext()).inflate(R.layout.row_diary, parent, false);
         return new NoteViewHolder(item);
     }
 
@@ -59,9 +59,9 @@ public class Adapter_List_Diary extends RecyclerView.Adapter<Adapter_List_Diary.
         NoteViewHolder(View item) {
             super(item);
 
-            noteTitle = (TextView) item.findViewById(R.id.rowDiaLeft_txtTitle);
-            noteDate = (TextView) item.findViewById(R.id.rowDiaLeft_txtDate);
-            noteDesc = (TextView) item.findViewById(R.id.rowDiaLeft_txtDescription);
+            noteTitle = (TextView) item.findViewById(R.id.rowDia_txtTitle);
+            noteDate = (TextView) item.findViewById(R.id.rowDia_txtDate);
+            noteDesc = (TextView) item.findViewById(R.id.rowDia_txtDescription);
         }
     }
 

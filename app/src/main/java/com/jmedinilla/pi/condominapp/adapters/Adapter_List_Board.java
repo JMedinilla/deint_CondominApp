@@ -31,7 +31,7 @@ public class Adapter_List_Board extends RecyclerView.Adapter<Adapter_List_Board.
 
     @Override
     public EntryViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View item = LayoutInflater.from(parent.getContext()).inflate(R.layout.row_board_left, null);
+        View item = LayoutInflater.from(parent.getContext()).inflate(R.layout.row_board, parent, false);
         return new EntryViewHolder(item);
     }
 
@@ -59,9 +59,9 @@ public class Adapter_List_Board extends RecyclerView.Adapter<Adapter_List_Board.
         EntryViewHolder(View item) {
             super(item);
 
-            entryTitle = (TextView) item.findViewById(R.id.rowBoaLeft_txtTitle);
-            entryDate = (TextView) item.findViewById(R.id.rowBoaLeft_txtDate);
-            entryDesc = (TextView) item.findViewById(R.id.rowBoaLeft_txtDescription);
+            entryTitle = (TextView) item.findViewById(R.id.rowBoa_txtTitle);
+            entryDate = (TextView) item.findViewById(R.id.rowBoa_txtDate);
+            entryDesc = (TextView) item.findViewById(R.id.rowBoa_txtDescription);
         }
     }
 

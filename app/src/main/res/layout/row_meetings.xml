@@ -8,18 +8,17 @@
     android:paddingTop="@dimen/activity_vertical_margin">
 
     <ImageView
-        android:id="@+id/rowMeeRight_imgLogo"
+        android:id="@+id/rowMee_imgLogo"
         android:layout_width="100dp"
         android:layout_height="40dp"
-        android:layout_alignParentEnd="true"
         android:contentDescription="@string/contentdescription_imageview"
         android:src="@mipmap/row_meeting" />
 
     <TextView
-        android:id="@+id/rowMeeRight_txtDate"
+        android:id="@+id/rowMee_txtDate"
         android:layout_width="match_parent"
         android:layout_height="40dp"
-        android:layout_toStartOf="@id/rowMeeRight_imgLogo"
+        android:layout_toEndOf="@id/rowMee_imgLogo"
         android:gravity="center"
         android:textColor="@color/colorPrimaryDark"
         android:textSize="22sp" />

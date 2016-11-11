@@ -42,10 +42,10 @@ public class Adapter_List_Incidents extends RecyclerView.Adapter<RecyclerView.Vi
 
         switch (viewType) {
             case 0:
-                itemLeft = LayoutInflater.from(parent.getContext()).inflate(R.layout.row_incidents_left, null);
+                itemLeft = LayoutInflater.from(parent.getContext()).inflate(R.layout.row_incidents_left, parent, false);
                 break;
             case 2:
-                itemRight = LayoutInflater.from(parent.getContext()).inflate(R.layout.row_incidents_right, null);
+                itemRight = LayoutInflater.from(parent.getContext()).inflate(R.layout.row_incidents_right, parent, false);
                 break;
         }
 

@@ -32,7 +32,7 @@ public class Adapter_List_Meetings extends RecyclerView.Adapter<Adapter_List_Mee
 
     @Override
     public Adapter_List_Meetings.MeetingViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View item = LayoutInflater.from(parent.getContext()).inflate(R.layout.row_meetings_left, null);
+        View item = LayoutInflater.from(parent.getContext()).inflate(R.layout.row_meetings, parent, false);
         return new MeetingViewHolder(item);
     }
 
@@ -56,7 +56,7 @@ public class Adapter_List_Meetings extends RecyclerView.Adapter<Adapter_List_Mee
         MeetingViewHolder(View item) {
             super(item);
 
-            meetingDate = (TextView) item.findViewById(R.id.rowMeeLeft_txtDate);
+            meetingDate = (TextView) item.findViewById(R.id.rowMee_txtDate);
         }
     }
 

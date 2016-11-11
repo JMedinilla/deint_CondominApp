@@ -5,7 +5,6 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.jmedinilla.pi.condominapp.ModelApplication;
@@ -32,7 +31,7 @@ public class Adapter_List_Board_Community extends RecyclerView.Adapter<Adapter_L
 
     @Override
     public EntryViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View item = LayoutInflater.from(parent.getContext()).inflate(R.layout.row_board_left, null);
+        View item = LayoutInflater.from(parent.getContext()).inflate(R.layout.row_board, parent, false);
         return new EntryViewHolder(item);
     }
 
@@ -53,7 +52,6 @@ public class Adapter_List_Board_Community extends RecyclerView.Adapter<Adapter_L
     }
 
     static class EntryViewHolder extends RecyclerView.ViewHolder {
-        ImageView entryImg;
         TextView entryTitle;
         TextView entryDate;
         TextView entryDesc;
@@ -61,10 +59,9 @@ public class Adapter_List_Board_Community extends RecyclerView.Adapter<Adapter_L
         EntryViewHolder(View item) {
             super(item);
 
-            entryImg = (ImageView) item.findViewById(R.id.rowBoaLeft_imgLogo);
-            entryTitle = (TextView) item.findViewById(R.id.rowBoaLeft_txtTitle);
-            entryDate = (TextView) item.findViewById(R.id.rowBoaLeft_txtDate);
-            entryDesc = (TextView) item.findViewById(R.id.rowBoaLeft_txtDescription);
+            entryTitle = (TextView) item.findViewById(R.id.rowBoa_txtTitle);
+            entryDate = (TextView) item.findViewById(R.id.rowBoa_txtDate);
+            entryDesc = (TextView) item.findViewById(R.id.rowBoa_txtDescription);
         }
     }
 

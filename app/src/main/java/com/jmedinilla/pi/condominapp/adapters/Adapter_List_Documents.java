@@ -41,10 +41,10 @@ public class Adapter_List_Documents extends RecyclerView.Adapter<RecyclerView.Vi
 
         switch (viewType) {
             case 0:
-                itemLeft = LayoutInflater.from(parent.getContext()).inflate(R.layout.row_documents_left, null);
+                itemLeft = LayoutInflater.from(parent.getContext()).inflate(R.layout.row_documents_left, parent, false);
                 break;
             case 2:
-                itemRight = LayoutInflater.from(parent.getContext()).inflate(R.layout.row_documents_right, null);
+                itemRight = LayoutInflater.from(parent.getContext()).inflate(R.layout.row_documents_right, parent, false);
                 break;
         }
 
