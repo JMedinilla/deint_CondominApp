@@ -35,12 +35,12 @@
         <activity android:name=".Activity_Main_Information" />
         <activity android:name=".Activity_Main_Profile" />
         <activity android:name=".Activity_Main_Settings" />
-        <activity android:name=".Form_Board" />
-        <activity android:name=".Form_Board_Community" />
-        <activity android:name=".Form_Diary" />
-        <activity android:name=".Form_Documents" />
-        <activity android:name=".Form_Incidents" />
-        <activity android:name=".Form_Meetings"></activity>
+        <activity android:name=".forms.Form_Board" />
+        <activity android:name=".forms.Form_Board_Community" />
+        <activity android:name=".forms.Form_Diary" />
+        <activity android:name=".forms.Form_Documents" />
+        <activity android:name=".forms.Form_Incidents" />
+        <activity android:name=".forms.Form_Meetings"></activity>
     </application>
 
 </manifest>

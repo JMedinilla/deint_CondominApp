@@ -40,7 +40,8 @@ public class ModelApplication extends Application {
 
     private ArrayList<Model_Community> communityList;
     private ArrayList<Model_Document> documentList;
-    private ArrayList<Model_Entry> entryList;
+    private ArrayList<Model_Entry> entryFirstList;
+    private ArrayList<Model_Entry> entrySecondList;
     private ArrayList<Model_Incident> incidentList;
     private ArrayList<Model_Meeting> meetingList;
     private ArrayList<Model_Note> noteList;
@@ -52,7 +53,8 @@ public class ModelApplication extends Application {
         super.onCreate();
         communityList = new ArrayList<>();
         documentList = new ArrayList<>();
-        entryList = new ArrayList<>();
+        entryFirstList = new ArrayList<>();
+        entrySecondList = new ArrayList<>();
         incidentList = new ArrayList<>();
         meetingList = new ArrayList<>();
         noteList = new ArrayList<>();
@@ -60,23 +62,22 @@ public class ModelApplication extends Application {
         userList = new ArrayList<>();
 
         Model_User tmpUser = new Model_User(0, "floor", "door", "phone", "mail", "name", Model_User.NEIGHBOUR);
-        long seconds = Calendar.getInstance().get(Calendar.SECOND);
+        Calendar calendar = Calendar.getInstance();
+
 
         saveDocument(new Model_Document(0, "title", "desc", "link"));
         saveDocument(new Model_Document(0, "title", "desc", "link"));
         saveDocument(new Model_Document(0, "title", "desc", "link"));
-        saveEntry(new Model_Entry(tmpUser, "title", "content", new Date(seconds), Model_Entry.FIRST));
-        saveEntry(new Model_Entry(tmpUser, "title", "content", new Date(seconds), Model_Entry.FIRST));
-        saveEntry(new Model_Entry(tmpUser, "title", "content", new Date(seconds), Model_Entry.FIRST));
-        saveIncident(new Model_Incident(tmpUser, new Date(seconds), "title", "desc", "link"));
-        saveIncident(new Model_Incident(tmpUser, new Date(seconds), "title", "desc", "link"));
-        saveIncident(new Model_Incident(tmpUser, new Date(seconds), "title", "desc", "link"));
-        saveMeeting(new Model_Meeting(0, new Date(seconds)));
-        saveMeeting(new Model_Meeting(0, new Date(seconds)));
-        saveMeeting(new Model_Meeting(0, new Date(seconds)));
-        saveNote(new Model_Note(0, new Date(seconds), "title", "content"));
-        saveNote(new Model_Note(0, new Date(seconds), "title", "content"));
-        saveNote(new Model_Note(0, new Date(seconds), "title", "content"));
+        saveFirstEntry(new Model_Entry(tmpUser, "Ruidos nocturnos", "Recuerdo a los vecinos que el ayuntamiento prohíbe el ruído a partir de las 22:00", new Date(calendar.getTimeInMillis()), Model_Entry.FIRST));
+        saveSecondEntry(new Model_Entry(tmpUser, "Pantalón perdido", "Soy del 1A y tengo un pantalón vaquero que se ha caído al patio", new Date(calendar.getTimeInMillis()), Model_Entry.SECOND));
+        saveIncident(new Model_Incident(tmpUser, new Date(calendar.getTimeInMillis()), "title", "desc", "link"));
+        saveIncident(new Model_Incident(tmpUser, new Date(calendar.getTimeInMillis()), "title", "desc", "link"));
+        saveIncident(new Model_Incident(tmpUser, new Date(calendar.getTimeInMillis()), "title", "desc", "link"));
+        saveMeeting(new Model_Meeting(0, new Date(calendar.getTimeInMillis())));
+        saveMeeting(new Model_Meeting(0, new Date(calendar.getTimeInMillis())));
+        saveMeeting(new Model_Meeting(0, new Date(calendar.getTimeInMillis())));
+        saveNote(new Model_Note(0, new Date(calendar.getTimeInMillis()), "Corte de agua", "El martes 21 hay un corte de agua desde las 4:00 hasta las 8:00"));
+        saveNote(new Model_Note(0, new Date(calendar.getTimeInMillis()), "Revisión ascensor", "El día 14 de diciembre viene el revisor a ver el ascensor"));
     }
 
     public void saveCommunity(Model_Community community) {
@@ -87,8 +88,12 @@ public class ModelApplication extends Application {
         documentList.add(document);
     }
 
-    public void saveEntry(Model_Entry entry) {
-        entryList.add(entry);
+    public void saveFirstEntry(Model_Entry entry) {
+        entryFirstList.add(entry);
+    }
+
+    public void saveSecondEntry(Model_Entry entry) {
+        entrySecondList.add(entry);
     }
 
     public void saveIncident(Model_Incident incident) {
@@ -119,8 +124,12 @@ public class ModelApplication extends Application {
         return documentList;
     }
 
-    public List<Model_Entry> getEntries() {
-        return entryList;
+    public List<Model_Entry> getFirstEntries() {
+        return entryFirstList;
+    }
+
+    public List<Model_Entry> getSecondEntries() {
+        return entrySecondList;
     }
 
     public List<Model_Incident> getIncidents() {
@@ -181,20 +190,36 @@ public class ModelApplication extends Application {
         return documentList;
     }
 
-    public List<Model_Entry> getEntries(boolean asc, int type) {
+    public List<Model_Entry> getFirstEntries(boolean asc, int type) {
         if (asc) {
             switch (type) {
                 case TYPE_ENTRY_TITLE:
-                    Collections.sort(entryList, Model_Entry.COMPARATOR_ENTRY_TITLE_ASC);
+                    Collections.sort(entryFirstList, Model_Entry.COMPARATOR_ENTRY_TITLE_ASC);
                     break;
                 case TYPE_ENTRY_DATE:
-                    Collections.sort(entryList, Model_Entry.COMPARATOR_ENTRY_DATE_ASC);
+                    Collections.sort(entryFirstList, Model_Entry.COMPARATOR_ENTRY_DATE_ASC);
                     break;
             }
         } else {
-            Collections.sort(entryList, Collections.<Model_Entry>reverseOrder());
+            Collections.sort(entryFirstList, Collections.<Model_Entry>reverseOrder());
         }
-        return entryList;
+        return entryFirstList;
+    }
+
+    public List<Model_Entry> getSecondEntries(boolean asc, int type) {
+        if (asc) {
+            switch (type) {
+                case TYPE_ENTRY_TITLE:
+                    Collections.sort(entrySecondList, Model_Entry.COMPARATOR_ENTRY_TITLE_ASC);
+                    break;
+                case TYPE_ENTRY_DATE:
+                    Collections.sort(entrySecondList, Model_Entry.COMPARATOR_ENTRY_DATE_ASC);
+                    break;
+            }
+        } else {
+            Collections.sort(entrySecondList, Collections.<Model_Entry>reverseOrder());
+        }
+        return entrySecondList;
     }
 
     public List<Model_Incident> getIncidents(boolean asc, int type) {
