@@ -2,7 +2,6 @@ package com.jmedinilla.pi.condominapp.models;
 
 import android.support.annotation.NonNull;
 
-import java.sql.Blob;
 import java.util.Comparator;
 import java.util.Date;
 import java.util.UUID;
@@ -18,10 +17,10 @@ public class Model_Incident implements Comparable<Model_Incident> {
     private Date in_date;
     private String in_title;
     private String in_description;
-    private Blob in_photo;
+    private String in_photo;
 
     public Model_Incident(Model_User in_user, Date in_date,
-                          String in_title, String in_description, Blob in_photo) {
+                          String in_title, String in_description, String in_photo) {
         this.in_id = UUID.randomUUID().toString();
         this.in_user = in_user;
         this.in_date = in_date;
@@ -120,11 +119,11 @@ public class Model_Incident implements Comparable<Model_Incident> {
     }
 
     //PHOTO
-    public Blob getIn_photo() {
+    public String getIn_photo() {
         return in_photo;
     }
 
-    public void setIn_photo(Blob in_photo) {
+    public void setIn_photo(String in_photo) {
         this.in_photo = in_photo;
     }
 

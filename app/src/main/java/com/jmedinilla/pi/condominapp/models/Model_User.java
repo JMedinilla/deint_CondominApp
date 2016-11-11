@@ -11,6 +11,10 @@ import java.util.UUID;
  * BD user
  */
 public class Model_User implements Comparable<Model_User> {
+    public static final int ADMINISTRATOR = 100;
+    public static final int PRESIDENT = 200;
+    public static final int NEIGHBOUR = 300;
+
     private String us_id;
     private int us_community;
     private String us_floor;

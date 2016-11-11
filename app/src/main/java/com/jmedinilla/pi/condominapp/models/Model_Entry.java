@@ -12,6 +12,9 @@ import java.util.UUID;
  * BD entry for a board
  */
 public class Model_Entry implements Comparable<Model_Entry> {
+    public static final int FIRST = 100;
+    public static final int SECOND = 200;
+
     private String en_id;
     private Model_User en_user;
     private String en_title;

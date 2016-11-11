@@ -3,6 +3,7 @@
     package="com.jmedinilla.pi.condominapp">
 
     <application
+        android:name=".ModelApplication"
         android:allowBackup="true"
         android:fullBackupContent="false"
         android:icon="@drawable/applogo"
