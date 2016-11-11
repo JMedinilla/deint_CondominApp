@@ -61,18 +61,17 @@ public class ModelApplication extends Application {
         pointList = new ArrayList<>();
         userList = new ArrayList<>();
 
-        Model_User tmpUser = new Model_User(0, "floor", "door", "phone", "mail", "name", Model_User.NEIGHBOUR);
+        Model_User tmpUser = new Model_User(0, "2", "B", "656565656", "correo@correo.com", "Javier", Model_User.NEIGHBOUR);
         Calendar calendar = Calendar.getInstance();
 
-
-        saveDocument(new Model_Document(0, "title", "desc", "link"));
-        saveDocument(new Model_Document(0, "title", "desc", "link"));
-        saveDocument(new Model_Document(0, "title", "desc", "link"));
+        saveDocument(new Model_Document(0, "Estatutos", "Estatutos de la comunidad actualizados", "asdfasdfasdfasdfasdfasdfasdf"));
+        saveDocument(new Model_Document(0, "Normativa ruidos", "Normativa del ayuntamiento sobre ruidos", "asdfasdfasdfasdfasdfasdfasdf"));
         saveFirstEntry(new Model_Entry(tmpUser, "Ruidos nocturnos", "Recuerdo a los vecinos que el ayuntamiento prohíbe el ruído a partir de las 22:00", new Date(calendar.getTimeInMillis()), Model_Entry.FIRST));
         saveSecondEntry(new Model_Entry(tmpUser, "Pantalón perdido", "Soy del 1A y tengo un pantalón vaquero que se ha caído al patio", new Date(calendar.getTimeInMillis()), Model_Entry.SECOND));
-        saveIncident(new Model_Incident(tmpUser, new Date(calendar.getTimeInMillis()), "title", "desc", "link"));
-        saveIncident(new Model_Incident(tmpUser, new Date(calendar.getTimeInMillis()), "title", "desc", "link"));
-        saveIncident(new Model_Incident(tmpUser, new Date(calendar.getTimeInMillis()), "title", "desc", "link"));
+        saveIncident(new Model_Incident(tmpUser, new Date(calendar.getTimeInMillis()), "Bombilla fundida", "La bombilla del rellano del 3º está fundida", "asdfasdfasdfasdfasdfasdfasdf"));
+        saveIncident(new Model_Incident(tmpUser, new Date(calendar.getTimeInMillis()), "Azulejo roto", "Dentro del portal hay un azulejo roto en las escaleras", "asdfasdfasdfasdfasdfasdfasdf"));
+        saveMeeting(new Model_Meeting(0, new Date(calendar.getTimeInMillis())));
+        saveMeeting(new Model_Meeting(0, new Date(calendar.getTimeInMillis())));
         saveMeeting(new Model_Meeting(0, new Date(calendar.getTimeInMillis())));
         saveMeeting(new Model_Meeting(0, new Date(calendar.getTimeInMillis())));
         saveMeeting(new Model_Meeting(0, new Date(calendar.getTimeInMillis())));
@@ -116,6 +115,7 @@ public class ModelApplication extends Application {
         userList.add(user);
     }
 
+
     public List<Model_Community> getCommunities() {
         return communityList;
     }
@@ -151,6 +151,7 @@ public class ModelApplication extends Application {
     public List<Model_User> getUsers() {
         return userList;
     }
+
 
     public List<Model_Community> getCommunities(boolean asc, int type) {
         if (asc) {

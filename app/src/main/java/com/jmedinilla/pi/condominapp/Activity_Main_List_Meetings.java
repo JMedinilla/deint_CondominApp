@@ -3,12 +3,14 @@ package com.jmedinilla.pi.condominapp;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.AutoCompleteTextView;
 import android.widget.RelativeLayout;
 
+import com.jmedinilla.pi.condominapp.adapters.Adapter_List_Meetings;
 import com.jmedinilla.pi.condominapp.forms.Form_Meetings;
 
 public class Activity_Main_List_Meetings extends AppCompatActivity {
@@ -17,12 +19,24 @@ public class Activity_Main_List_Meetings extends AppCompatActivity {
     private AutoCompleteTextView main_meetings_atxtSearch;
     private RecyclerView main_meetings_rcvMeetings;
 
+    private Adapter_List_Meetings adapter_list_meetings;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_list_meetings);
 
         initializeComponents();
+
+        adapter_list_meetings = new Adapter_List_Meetings(Activity_Main_List_Meetings.this);
+
+        LinearLayoutManager llm = new LinearLayoutManager(this);
+        llm.setOrientation(LinearLayoutManager.VERTICAL);
+
+        if (main_meetings_rcvMeetings != null) {
+            main_meetings_rcvMeetings.setLayoutManager(llm);
+            main_meetings_rcvMeetings.setAdapter(adapter_list_meetings);
+        }
     }
 
     private void initializeComponents() {

@@ -5,7 +5,6 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.jmedinilla.pi.condominapp.ModelApplication;
@@ -27,7 +26,7 @@ public class Adapter_List_Board extends RecyclerView.Adapter<Adapter_List_Board.
 
     public Adapter_List_Board(Context context) {
         this.ctxt = context;
-        this.entries = new ArrayList<>(((ModelApplication)ctxt.getApplicationContext()).getFirstEntries());
+        this.entries = new ArrayList<>(((ModelApplication) ctxt.getApplicationContext()).getFirstEntries());
     }
 
     @Override
@@ -53,7 +52,6 @@ public class Adapter_List_Board extends RecyclerView.Adapter<Adapter_List_Board.
     }
 
     static class EntryViewHolder extends RecyclerView.ViewHolder {
-        ImageView entryImg;
         TextView entryTitle;
         TextView entryDate;
         TextView entryDesc;
@@ -61,21 +59,20 @@ public class Adapter_List_Board extends RecyclerView.Adapter<Adapter_List_Board.
         EntryViewHolder(View item) {
             super(item);
 
-            entryImg = (ImageView)item.findViewById(R.id.rowBoaLeft_imgLogo);
-            entryTitle = (TextView)item.findViewById(R.id.rowBoaLeft_txtTitle);
-            entryDate = (TextView)item.findViewById(R.id.rowBoaLeft_txtDate);
-            entryDesc = (TextView)item.findViewById(R.id.rowBoaLeft_txtDescription);
+            entryTitle = (TextView) item.findViewById(R.id.rowBoaLeft_txtTitle);
+            entryDate = (TextView) item.findViewById(R.id.rowBoaLeft_txtDate);
+            entryDesc = (TextView) item.findViewById(R.id.rowBoaLeft_txtDescription);
         }
     }
 
-    public void getAllEntries(List<Model_Entry> productList) {
+    public void getAllEntries(List<Model_Entry> entries) {
         this.entries.clear();
-        this.entries.addAll(productList);
+        this.entries.addAll(entries);
         notifyDataSetChanged();
     }
 
     public void entryAddedNotify() {
-        this.entries = new ArrayList<>(((ModelApplication)ctxt.getApplicationContext()).getFirstEntries());
+        this.entries = new ArrayList<>(((ModelApplication) ctxt.getApplicationContext()).getFirstEntries());
         notifyDataSetChanged();
     }
 }

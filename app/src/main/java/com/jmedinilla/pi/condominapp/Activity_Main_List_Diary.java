@@ -3,12 +3,14 @@ package com.jmedinilla.pi.condominapp;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.AutoCompleteTextView;
 import android.widget.RelativeLayout;
 
+import com.jmedinilla.pi.condominapp.adapters.Adapter_List_Diary;
 import com.jmedinilla.pi.condominapp.forms.Form_Diary;
 
 public class Activity_Main_List_Diary extends AppCompatActivity {
@@ -17,12 +19,24 @@ public class Activity_Main_List_Diary extends AppCompatActivity {
     private AutoCompleteTextView main_diary_atxtSearch;
     private RecyclerView main_diary_rcvDiary;
 
+    private Adapter_List_Diary adapter_list_diary;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_list_diary);
 
         initializeComponents();
+
+        adapter_list_diary = new Adapter_List_Diary(Activity_Main_List_Diary.this);
+
+        LinearLayoutManager llm = new LinearLayoutManager(this);
+        llm.setOrientation(LinearLayoutManager.VERTICAL);
+
+        if (main_diary_rcvDiary != null) {
+            main_diary_rcvDiary.setLayoutManager(llm);
+            main_diary_rcvDiary.setAdapter(adapter_list_diary);
+        }
     }
 
     private void initializeComponents() {

@@ -9,24 +9,24 @@
 
     <ImageView
         android:id="@+id/rowIncLeft_imgLogo"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
+        android:layout_width="140dp"
+        android:layout_height="100dp"
         android:contentDescription="@string/contentdescription_imageview"
         android:src="@mipmap/row_incident" />
 
     <TextView
         android:id="@+id/rowIncLeft_txtTitle"
         android:layout_width="match_parent"
-        android:layout_height="30dp"
+        android:layout_height="40dp"
         android:layout_toEndOf="@id/rowIncLeft_imgLogo"
         android:gravity="center"
         android:textColor="@color/colorPrimaryDark"
-        android:textSize="16sp" />
+        android:textSize="18sp" />
 
     <TextView
         android:id="@+id/rowIncLeft_txtDate"
         android:layout_width="match_parent"
-        android:layout_height="45dp"
+        android:layout_height="40dp"
         android:layout_below="@id/rowIncLeft_txtTitle"
         android:layout_toEndOf="@id/rowIncLeft_imgLogo"
         android:gravity="center"
@@ -35,7 +35,7 @@
     <TextView
         android:id="@+id/rowIncLeft_txtAuthor"
         android:layout_width="match_parent"
-        android:layout_height="45dp"
+        android:layout_height="20dp"
         android:layout_below="@id/rowIncLeft_txtDate"
         android:layout_toEndOf="@id/rowIncLeft_imgLogo"
         android:gravity="center"

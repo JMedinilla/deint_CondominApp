@@ -3,12 +3,14 @@ package com.jmedinilla.pi.condominapp;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.AutoCompleteTextView;
 import android.widget.RelativeLayout;
 
+import com.jmedinilla.pi.condominapp.adapters.Adapter_List_Documents;
 import com.jmedinilla.pi.condominapp.forms.Form_Documents;
 
 public class Activity_Main_List_Documents extends AppCompatActivity {
@@ -17,12 +19,24 @@ public class Activity_Main_List_Documents extends AppCompatActivity {
     private AutoCompleteTextView main_documents_atxtSearch;
     private RecyclerView main_documents_rcvDocuments;
 
+    private Adapter_List_Documents adapter_list_documents;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_list_documents);
 
         initializeComponents();
+
+        adapter_list_documents = new Adapter_List_Documents(Activity_Main_List_Documents.this);
+
+        LinearLayoutManager llm = new LinearLayoutManager(this);
+        llm.setOrientation(LinearLayoutManager.VERTICAL);
+
+        if (main_documents_rcvDocuments != null) {
+            main_documents_rcvDocuments.setLayoutManager(llm);
+            main_documents_rcvDocuments.setAdapter(adapter_list_documents);
+        }
     }
 
     private void initializeComponents() {

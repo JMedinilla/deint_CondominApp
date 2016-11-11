@@ -27,7 +27,7 @@ public class Adapter_List_Board_Community extends RecyclerView.Adapter<Adapter_L
 
     public Adapter_List_Board_Community(Context context) {
         this.ctxt = context;
-        this.entries = new ArrayList<>(((ModelApplication)ctxt.getApplicationContext()).getSecondEntries());
+        this.entries = new ArrayList<>(((ModelApplication) ctxt.getApplicationContext()).getSecondEntries());
     }
 
     @Override
@@ -61,21 +61,21 @@ public class Adapter_List_Board_Community extends RecyclerView.Adapter<Adapter_L
         EntryViewHolder(View item) {
             super(item);
 
-            entryImg = (ImageView)item.findViewById(R.id.rowBoaLeft_imgLogo);
-            entryTitle = (TextView)item.findViewById(R.id.rowBoaLeft_txtTitle);
-            entryDate = (TextView)item.findViewById(R.id.rowBoaLeft_txtDate);
-            entryDesc = (TextView)item.findViewById(R.id.rowBoaLeft_txtDescription);
+            entryImg = (ImageView) item.findViewById(R.id.rowBoaLeft_imgLogo);
+            entryTitle = (TextView) item.findViewById(R.id.rowBoaLeft_txtTitle);
+            entryDate = (TextView) item.findViewById(R.id.rowBoaLeft_txtDate);
+            entryDesc = (TextView) item.findViewById(R.id.rowBoaLeft_txtDescription);
         }
     }
 
-    public void getAllEntries(List<Model_Entry> productList) {
+    public void getAllEntries(List<Model_Entry> entries) {
         this.entries.clear();
-        this.entries.addAll(productList);
+        this.entries.addAll(entries);
         notifyDataSetChanged();
     }
 
     public void entryAddedNotify() {
-        this.entries = new ArrayList<>(((ModelApplication)ctxt.getApplicationContext()).getSecondEntries());
+        this.entries = new ArrayList<>(((ModelApplication) ctxt.getApplicationContext()).getSecondEntries());
         notifyDataSetChanged();
     }
 }
