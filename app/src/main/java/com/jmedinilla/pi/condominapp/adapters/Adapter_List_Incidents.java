@@ -20,7 +20,7 @@ import java.util.List;
  * <p>
  * Adapter for the list in the incidents screen
  */
-public class Adapter_List_Incidents extends RecyclerView.Adapter<Adapter_List_Incidents.IncidentViewHolder> {
+public class Adapter_List_Incidents extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
     private List<Model_Incident> incidents;
     private Context ctxt;
@@ -31,21 +31,50 @@ public class Adapter_List_Incidents extends RecyclerView.Adapter<Adapter_List_In
     }
 
     @Override
-    public IncidentViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View item = LayoutInflater.from(parent.getContext()).inflate(R.layout.row_incidents_left, null);
-        return new IncidentViewHolder(item);
+    public int getItemViewType(int position) {
+        return position % 2 * 2;
     }
 
     @Override
-    public void onBindViewHolder(IncidentViewHolder holder, int position) {
+    public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        View itemLeft = null;
+        View itemRight = null;
+
+        switch (viewType) {
+            case 0:
+                itemLeft = LayoutInflater.from(parent.getContext()).inflate(R.layout.row_incidents_left, null);
+                break;
+            case 2:
+                itemRight = LayoutInflater.from(parent.getContext()).inflate(R.layout.row_incidents_right, null);
+                break;
+        }
+
+        if (viewType == 0) {
+            return new IncidentViewHolderLeft(itemLeft);
+        } else {
+            return new IncidentViewHolderRight(itemRight);
+        }
+    }
+
+    @Override
+    public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
         String month = (String) android.text.format.DateFormat.format("MMM", incidents.get(position).getIn_date());
         String year = (String) android.text.format.DateFormat.format("yyyy", incidents.get(position).getIn_date());
         String day = (String) android.text.format.DateFormat.format("dd", incidents.get(position).getIn_date());
 
-        //holder.incidentImg.setImage
-        holder.incidentTitle.setText(incidents.get(position).getIn_title());
-        holder.incidentDate.setText(day + " " + month + " " + year);
-        holder.incidentAuthor.setText(incidents.get(position).getIn_user().getUs_name());
+        if (position % 2 == 0) {
+            IncidentViewHolderLeft holderLeft = (IncidentViewHolderLeft) holder;
+            //image
+            holderLeft.incidentTitleLeft.setText(incidents.get(position).getIn_title());
+            holderLeft.incidentDateLeft.setText(day + " " + month + " " + year);
+            holderLeft.incidentAuthorLeft.setText(incidents.get(position).getIn_user().getUs_name());
+        } else {
+            IncidentViewHolderRight holderRight = (IncidentViewHolderRight) holder;
+            //image
+            holderRight.incidentTitleRight.setText(incidents.get(position).getIn_title());
+            holderRight.incidentDateRight.setText(day + " " + month + " " + year);
+            holderRight.incidentAuthorRight.setText(incidents.get(position).getIn_user().getUs_name());
+        }
     }
 
     @Override
@@ -53,18 +82,33 @@ public class Adapter_List_Incidents extends RecyclerView.Adapter<Adapter_List_In
         return incidents.size();
     }
 
-    static class IncidentViewHolder extends RecyclerView.ViewHolder {
-        ImageView incidentImg;
-        TextView incidentTitle;
-        TextView incidentDate;
-        TextView incidentAuthor;
+    private static class IncidentViewHolderLeft extends RecyclerView.ViewHolder {
+        ImageView incidentImgLeft;
+        TextView incidentTitleLeft;
+        TextView incidentDateLeft;
+        TextView incidentAuthorLeft;
 
-        IncidentViewHolder(View item) {
+        IncidentViewHolderLeft(View item) {
             super(item);
-            incidentImg = (ImageView) item.findViewById(R.id.rowIncLeft_imgLogo);
-            incidentTitle = (TextView) item.findViewById(R.id.rowIncLeft_txtTitle);
-            incidentDate = (TextView) item.findViewById(R.id.rowIncLeft_txtDate);
-            incidentAuthor = (TextView) item.findViewById(R.id.rowIncLeft_txtAuthor);
+            incidentImgLeft = (ImageView) item.findViewById(R.id.rowIncLeft_imgLogo);
+            incidentTitleLeft = (TextView) item.findViewById(R.id.rowIncLeft_txtTitle);
+            incidentDateLeft = (TextView) item.findViewById(R.id.rowIncLeft_txtDate);
+            incidentAuthorLeft = (TextView) item.findViewById(R.id.rowIncLeft_txtAuthor);
+        }
+    }
+
+    private static class IncidentViewHolderRight extends RecyclerView.ViewHolder {
+        ImageView incidentImgRight;
+        TextView incidentTitleRight;
+        TextView incidentDateRight;
+        TextView incidentAuthorRight;
+
+        IncidentViewHolderRight(View item) {
+            super(item);
+            incidentImgRight = (ImageView) item.findViewById(R.id.rowIncRight_imgLogo);
+            incidentTitleRight = (TextView) item.findViewById(R.id.rowIncRight_txtTitle);
+            incidentDateRight = (TextView) item.findViewById(R.id.rowIncRight_txtDate);
+            incidentAuthorRight = (TextView) item.findViewById(R.id.rowIncRight_txtAuthor);
         }
     }
 
