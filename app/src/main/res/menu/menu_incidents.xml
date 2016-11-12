@@ -23,4 +23,11 @@
         android:title="@string/action_incidents_sortTitle"
         app:showAsAction="never" />
 
+    <item
+        android:id="@+id/action_incidents_sortAuthor"
+        android:icon="@android:drawable/ic_menu_sort_by_size"
+        android:orderInCategory="3"
+        android:title="@string/action_incidents_sortAuthor"
+        app:showAsAction="never" />
+
 </menu>

@@ -3,7 +3,6 @@
     <string name="placeholder">[PLACEHOLDER]</string>
     <string name="app_name">CondominApp</string>
     <string name="contentdescription_imageview">contentDescription_imageview</string>
-
     <!-- Login Main -->
     <string name="login_main_txtTitle">CONDOMINAPP</string>
     <string name="login_main_txtWelcome">Welcome to CondominApp</string>
@@ -12,7 +11,6 @@
     <string name="login_main_btnJoin">Join</string>
     <string name="login_main_btnLost">Key lost</string>
     <string name="login_main_edtKey">Access key</string>
-
     <!-- Login Information -->
     <string name="login_info_txtTitle">CONDOMINAPP</string>
     <string name="login_info_txtWelcome">Welcome to CondominApp</string>
@@ -20,16 +18,13 @@
     <string name="login_info_txtMail">Mail:</string>
     <string name="login_info_txtPhone">Phone:</string>
     <string name="login_info_btnClose">Close</string>
-
     <!-- Login Admin -->
     <string name="login_admin_txtTitle">CONDOMINAPP</string>
     <string name="login_admin_txtWelcome">Welcome to CondominApp</string>
     <string name="login_admin_txtInfo">Choose a community:</string>
-
     <!-- Home -->
     <string name="home_txtTitle">CONDOMINAPP</string>
     <string name="home_txtWelcome">Welcome to CondominApp</string>
-
     <!-- Menu -->
     <string name="action_profile">Profile</string>
     <string name="action_settings">Settings</string>
@@ -48,16 +43,15 @@
     <string name="action_incidents_add">Add</string>
     <string name="action_incidents_sortDate">Sort by Date</string>
     <string name="action_incidents_sortTitle">Sort by Title</string>
+    <string name="action_incidents_sortAuthor">Sort by Author</string>
     <string name="action_meetings_add">Add</string>
     <string name="action_meetings_sortDate">Sort by Date</string>
     <string name="action_meetings_sortTitle">Sort by Title</string>
-
     <!-- About -->
     <string name="about_git">JMedinilla/CondominApp</string>
     <string name="about_description">CondominApp creator</string>
     <string name="about_title">Javier Medinilla</string>
     <string name="about_btnClose">CLOSE</string>
-
     <!-- Main List Titles and Hints-->
     <string name="main_board_txtTitle">Board</string>
     <string name="main_cboard_txtTitle">Community Board</string>
@@ -71,5 +65,4 @@
     <string name="main_documents_atxtSearch">Search…</string>
     <string name="main_incidents_atxtSearch">Search…</string>
     <string name="main_meetings_atxtSearch">Search…</string>
-
 </resources>

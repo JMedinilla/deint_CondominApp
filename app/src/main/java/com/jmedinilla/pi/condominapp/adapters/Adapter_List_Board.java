@@ -21,12 +21,26 @@ import java.util.List;
  */
 public class Adapter_List_Board extends RecyclerView.Adapter<Adapter_List_Board.EntryViewHolder> {
 
+    private static final int TYPE_ENTRY_TITLE = 30;
+    private static final int TYPE_ENTRY_DATE = 31;
+    private static boolean ASC_TITLE = true;
+    private static boolean ASC_DATE = true;
+
     private List<Model_Entry> entries;
     private Context ctxt;
 
     public Adapter_List_Board(Context context) {
         this.ctxt = context;
         this.entries = new ArrayList<>(((ModelApplication) ctxt.getApplicationContext()).getFirstEntries());
+    }
+
+    public void sortBoard(int type) {
+        boolean ASC = false;
+
+        if (type == TYPE_ENTRY_TITLE) { ASC = ASC_TITLE; ASC_TITLE = !ASC_TITLE; }
+        else if (type == TYPE_ENTRY_DATE) { ASC = ASC_DATE; ASC_DATE = !ASC_DATE; }
+
+        getAllEntries(((ModelApplication)ctxt.getApplicationContext()).getFirstEntries(ASC, type));
     }
 
     @Override
@@ -65,9 +79,9 @@ public class Adapter_List_Board extends RecyclerView.Adapter<Adapter_List_Board.
         }
     }
 
-    public void getAllEntries(List<Model_Entry> entries) {
+    private void getAllEntries(List<Model_Entry> entriesP) {
         this.entries.clear();
-        this.entries.addAll(entries);
+        this.entries.addAll(entriesP);
         notifyDataSetChanged();
     }
 

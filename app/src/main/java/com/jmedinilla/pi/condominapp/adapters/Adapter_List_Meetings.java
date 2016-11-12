@@ -22,12 +22,23 @@ import java.util.List;
  */
 public class Adapter_List_Meetings extends RecyclerView.Adapter<Adapter_List_Meetings.MeetingViewHolder> {
 
+    private static final int TYPE_MEETING_DATE = 50;
+    private static boolean ASC_DATE = true;
+
     private List<Model_Meeting> meetings;
     private Context ctxt;
 
     public Adapter_List_Meetings(Context context) {
         this.ctxt = context;
         this.meetings = new ArrayList<>(((ModelApplication) ctxt.getApplicationContext()).getMeetings());
+    }
+
+    public void sortMeeting(int type) {
+        boolean ASC = false;
+
+        if (type == TYPE_MEETING_DATE) { ASC = ASC_DATE; ASC_DATE = !ASC_DATE; }
+
+        getAllMeetings(((ModelApplication)ctxt.getApplicationContext()).getMeetings(ASC, type));
     }
 
     @Override
@@ -60,9 +71,9 @@ public class Adapter_List_Meetings extends RecyclerView.Adapter<Adapter_List_Mee
         }
     }
 
-    public void getAllMeetings(List<Model_Meeting> meetings) {
+    private void getAllMeetings(List<Model_Meeting> meetingsP) {
         this.meetings.clear();
-        this.meetings.addAll(meetings);
+        this.meetings.addAll(meetingsP);
         notifyDataSetChanged();
     }
 

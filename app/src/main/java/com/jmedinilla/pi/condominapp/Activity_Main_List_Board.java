@@ -15,6 +15,9 @@ import com.jmedinilla.pi.condominapp.forms.Form_Board;
 
 public class Activity_Main_List_Board extends AppCompatActivity {
 
+    private static final int TYPE_ENTRY_TITLE = 30;
+    private static final int TYPE_ENTRY_DATE = 31;
+
     private RelativeLayout main_board;
     private AutoCompleteTextView main_board_atxtSearch;
     private RecyclerView main_board_rcvBoard;
@@ -60,8 +63,10 @@ public class Activity_Main_List_Board extends AppCompatActivity {
                 startActivity(intent);
                 break;
             case R.id.action_board_sortDate:
+                adapter_list_board.sortBoard(TYPE_ENTRY_DATE);
                 break;
             case R.id.action_board_sortTitle:
+                adapter_list_board.sortBoard(TYPE_ENTRY_TITLE);
                 break;
         }
         return super.onOptionsItemSelected(item);

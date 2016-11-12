@@ -10,7 +10,7 @@ import java.util.UUID;
  * <p>
  * BD user
  */
-public class Model_User implements Comparable<Model_User> {
+public class Model_User {
     public static final int ADMINISTRATOR = 100;
     public static final int PRESIDENT = 200;
     public static final int NEIGHBOUR = 300;
@@ -24,10 +24,10 @@ public class Model_User implements Comparable<Model_User> {
     private String us_name;
     private int us_category;
 
-    public Model_User(int us_community, String us_floor,
+    public Model_User(String id, int us_community, String us_floor,
                       String us_door, String us_phone, String us_mail,
                       String us_name, int us_category) {
-        this.us_id = UUID.randomUUID().toString();
+        this.us_id = id;
         this.us_community = us_community;
         this.us_floor = us_floor;
         this.us_door = us_door;
@@ -57,21 +57,6 @@ public class Model_User implements Comparable<Model_User> {
     @Override
     public String toString() {
         return "User: " + us_name + " (" + us_phone + ") -> " + us_floor + us_door;
-    }
-
-    /**
-     * User comparable method
-     *
-     * @param another User to compare
-     * @return Wich one is higher
-     */
-    @Override
-    public int compareTo(@NonNull Model_User another) {
-        if (this.getUs_name().toUpperCase().compareTo(another.getUs_name().toUpperCase()) == 0) {
-            return this.getUs_phone().compareTo(another.getUs_phone());
-        } else {
-            return this.getUs_name().toUpperCase().compareTo(another.getUs_name().toUpperCase());
-        }
     }
 
     /**

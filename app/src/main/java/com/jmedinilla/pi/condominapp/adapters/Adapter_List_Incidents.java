@@ -22,12 +22,29 @@ import java.util.List;
  */
 public class Adapter_List_Incidents extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
+    private static final int TYPE_INCIDENT_TITLE = 40;
+    private static final int TYPE_INCIDENT_DATE = 41;
+    private static final int TYPE_INCIDENT_AUTHOR = 42;
+    private static boolean ASC_TITLE = true;
+    private static boolean ASC_DATE = true;
+    private static boolean ASC_AUTHOR = true;
+
     private List<Model_Incident> incidents;
     private Context ctxt;
 
     public Adapter_List_Incidents(Context context) {
         this.ctxt = context;
         this.incidents = new ArrayList<>(((ModelApplication) ctxt.getApplicationContext()).getIncidents());
+    }
+
+    public void sortIncident(int type) {
+        boolean ASC = false;
+
+        if (type == TYPE_INCIDENT_TITLE) { ASC = ASC_TITLE; ASC_TITLE = !ASC_TITLE; }
+        else if (type == TYPE_INCIDENT_DATE) { ASC = ASC_DATE; ASC_DATE = !ASC_DATE; }
+        else if (type == TYPE_INCIDENT_AUTHOR) { ASC = ASC_AUTHOR; ASC_AUTHOR = !ASC_AUTHOR; }
+
+        getAllIncidents(((ModelApplication)ctxt.getApplicationContext()).getIncidents(ASC, type));
     }
 
     @Override
@@ -112,9 +129,9 @@ public class Adapter_List_Incidents extends RecyclerView.Adapter<RecyclerView.Vi
         }
     }
 
-    public void getAllIncidents(List<Model_Incident> incidents) {
+    private void getAllIncidents(List<Model_Incident> incidentsP) {
         this.incidents.clear();
-        this.incidents.addAll(incidents);
+        this.incidents.addAll(incidentsP);
         notifyDataSetChanged();
     }
 

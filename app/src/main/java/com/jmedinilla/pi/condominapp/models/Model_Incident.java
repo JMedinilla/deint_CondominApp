@@ -11,7 +11,7 @@ import java.util.UUID;
  * <p>
  * BD incident
  */
-public class Model_Incident implements Comparable<Model_Incident> {
+public class Model_Incident {
     private String in_id;
     private Model_User in_user;
     private Date in_date;
@@ -49,25 +49,6 @@ public class Model_Incident implements Comparable<Model_Incident> {
     @Override
     public String toString() {
         return "Incident: " + in_title + " (" + in_date.toString() + ")";
-    }
-
-    /**
-     * Incident comparable method
-     *
-     * @param another Incident to compare
-     * @return Wich one is higher
-     */
-    @Override
-    public int compareTo(@NonNull Model_Incident another) {
-        if (this.getIn_title().toUpperCase().compareTo(another.getIn_title().toUpperCase()) == 0) {
-            if (this.getIn_date().compareTo(another.getIn_date()) == 0) {
-                return this.getIn_description().toUpperCase().compareTo(another.getIn_description().toUpperCase());
-            } else {
-                return this.getIn_date().compareTo(another.getIn_date());
-            }
-        } else {
-            return this.getIn_title().toUpperCase().compareTo(another.getIn_title().toUpperCase());
-        }
     }
 
     /**
@@ -154,6 +135,19 @@ public class Model_Incident implements Comparable<Model_Incident> {
         @Override
         public int compare(Model_Incident o1, Model_Incident o2) {
             return o2.getIn_date().compareTo(o1.getIn_date());
+        }
+    };
+    //AUTHOR
+    public static final Comparator<Model_Incident> COMPARATOR_INCIDENT_AUTHOR_ASC = new Comparator<Model_Incident>() {
+        @Override
+        public int compare(Model_Incident o1, Model_Incident o2) {
+            return o1.getIn_user().getUs_name().toUpperCase().compareTo(o2.getIn_user().getUs_name().toUpperCase());
+        }
+    };
+    public static final Comparator<Model_Incident> COMPARATOR_INCIDENT_AUTHOR_DES = new Comparator<Model_Incident>() {
+        @Override
+        public int compare(Model_Incident o1, Model_Incident o2) {
+            return o2.getIn_user().getUs_name().toUpperCase().compareTo(o1.getIn_user().getUs_name().toUpperCase());
         }
     };
 }

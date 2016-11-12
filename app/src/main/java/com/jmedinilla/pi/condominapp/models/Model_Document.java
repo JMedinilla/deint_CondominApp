@@ -10,7 +10,7 @@ import java.util.UUID;
  * <p>
  * BD document
  */
-public class Model_Document implements Comparable<Model_Document> {
+public class Model_Document {
     private String do_id;
     private int do_community;
     private String do_title;
@@ -47,25 +47,6 @@ public class Model_Document implements Comparable<Model_Document> {
     @Override
     public String toString() {
         return "Document: " + do_title + " -> " + do_link;
-    }
-
-    /**
-     * Document comparable method
-     *
-     * @param another Document to compare
-     * @return Wich one is higher
-     */
-    @Override
-    public int compareTo(@NonNull Model_Document another) {
-        if (this.getDo_title().toUpperCase().compareTo(another.getDo_title().toUpperCase()) == 0) {
-            if (this.getDo_link().toUpperCase().compareTo(another.getDo_link().toUpperCase()) == 0) {
-                return this.getDo_description().toUpperCase().compareTo(another.getDo_description().toUpperCase());
-            } else {
-                return this.getDo_link().toUpperCase().compareTo(another.getDo_link().toUpperCase());
-            }
-        } else {
-            return this.getDo_title().toUpperCase().compareTo(another.getDo_title().toUpperCase());
-        }
     }
 
     /**

@@ -15,6 +15,8 @@ import com.jmedinilla.pi.condominapp.forms.Form_Meetings;
 
 public class Activity_Main_List_Meetings extends AppCompatActivity {
 
+    private static final int TYPE_MEETING_DATE = 50;
+
     private RelativeLayout main_meetings;
     private AutoCompleteTextView main_meetings_atxtSearch;
     private RecyclerView main_meetings_rcvMeetings;
@@ -60,6 +62,7 @@ public class Activity_Main_List_Meetings extends AppCompatActivity {
                 startActivity(intent);
                 break;
             case R.id.action_meetings_sortDate:
+                adapter_list_meetings.sortMeeting(TYPE_MEETING_DATE);
                 break;
         }
         return super.onOptionsItemSelected(item);

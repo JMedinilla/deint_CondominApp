@@ -11,7 +11,7 @@ import java.util.UUID;
  * <p>
  * BD meeting
  */
-public class Model_Meeting implements Comparable<Model_Meeting> {
+public class Model_Meeting {
     private String me_id;
     private int me_community;
     private Date me_date;
@@ -42,17 +42,6 @@ public class Model_Meeting implements Comparable<Model_Meeting> {
     @Override
     public String toString() {
         return "Meeting (" + me_date.toString() + ")";
-    }
-
-    /**
-     * Meeting comparable method
-     *
-     * @param another Meeting to compare
-     * @return Which one is higher
-     */
-    @Override
-    public int compareTo(@NonNull Model_Meeting another) {
-        return this.getMe_date().compareTo(another.getMe_date());
     }
 
     /**

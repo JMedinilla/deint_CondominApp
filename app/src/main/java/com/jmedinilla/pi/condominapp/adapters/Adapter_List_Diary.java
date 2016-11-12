@@ -21,12 +21,26 @@ import java.util.List;
  */
 public class Adapter_List_Diary extends RecyclerView.Adapter<Adapter_List_Diary.NoteViewHolder> {
 
+    private static final int TYPE_NOTE_DATE = 60;
+    private static final int TYPE_NOTE_TITLE = 61;
+    private static boolean ASC_TITLE = true;
+    private static boolean ASC_DATE = true;
+
     private List<Model_Note> notes;
     private Context ctxt;
 
     public Adapter_List_Diary(Context context) {
         this.ctxt = context;
         this.notes = new ArrayList<>(((ModelApplication) ctxt.getApplicationContext()).getNotes());
+    }
+
+    public void sortDiary(int type) {
+        boolean ASC = false;
+
+        if (type == TYPE_NOTE_DATE) { ASC = ASC_TITLE; ASC_TITLE = !ASC_TITLE; }
+        else if (type == TYPE_NOTE_TITLE) { ASC = ASC_DATE; ASC_DATE = !ASC_DATE; }
+
+        getAllNotes(((ModelApplication)ctxt.getApplicationContext()).getNotes(ASC, type));
     }
 
     @Override
@@ -65,9 +79,9 @@ public class Adapter_List_Diary extends RecyclerView.Adapter<Adapter_List_Diary.
         }
     }
 
-    public void getAllNotes(List<Model_Note> notes) {
+    private void getAllNotes(List<Model_Note> notesP) {
         this.notes.clear();
-        this.notes.addAll(notes);
+        this.notes.addAll(notesP);
         notifyDataSetChanged();
     }
 

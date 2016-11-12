@@ -15,6 +15,8 @@ import com.jmedinilla.pi.condominapp.forms.Form_Documents;
 
 public class Activity_Main_List_Documents extends AppCompatActivity {
 
+    private static final int TYPE_DOCUMENT_TITLE = 20;
+
     private RelativeLayout main_documents;
     private AutoCompleteTextView main_documents_atxtSearch;
     private RecyclerView main_documents_rcvDocuments;
@@ -60,6 +62,7 @@ public class Activity_Main_List_Documents extends AppCompatActivity {
                 startActivity(intent);
                 break;
             case R.id.action_documents_sortTitle:
+                adapter_list_documents.sortDocument(TYPE_DOCUMENT_TITLE);
                 break;
         }
         return super.onOptionsItemSelected(item);

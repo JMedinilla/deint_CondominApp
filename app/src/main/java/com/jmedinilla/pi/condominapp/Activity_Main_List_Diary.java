@@ -15,6 +15,9 @@ import com.jmedinilla.pi.condominapp.forms.Form_Diary;
 
 public class Activity_Main_List_Diary extends AppCompatActivity {
 
+    private static final int TYPE_NOTE_DATE = 60;
+    private static final int TYPE_NOTE_TITLE = 61;
+
     private RelativeLayout main_diary;
     private AutoCompleteTextView main_diary_atxtSearch;
     private RecyclerView main_diary_rcvDiary;
@@ -60,8 +63,10 @@ public class Activity_Main_List_Diary extends AppCompatActivity {
                 startActivity(intent);
                 break;
             case R.id.action_diary_sortDate:
+                adapter_list_diary.sortDiary(TYPE_NOTE_DATE);
                 break;
             case R.id.action_diary_sortTitle:
+                adapter_list_diary.sortDiary(TYPE_NOTE_TITLE);
                 break;
         }
         return super.onOptionsItemSelected(item);

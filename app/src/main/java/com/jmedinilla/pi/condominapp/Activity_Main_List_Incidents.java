@@ -15,6 +15,10 @@ import com.jmedinilla.pi.condominapp.forms.Form_Incidents;
 
 public class Activity_Main_List_Incidents extends AppCompatActivity {
 
+    private static final int TYPE_INCIDENT_TITLE = 40;
+    private static final int TYPE_INCIDENT_DATE = 41;
+    private static final int TYPE_INCIDENT_AUTHOR = 42;
+
     private RelativeLayout main_incidents;
     private AutoCompleteTextView main_incidents_atxtSearch;
     private RecyclerView main_incidents_rcvIncidents;
@@ -60,8 +64,13 @@ public class Activity_Main_List_Incidents extends AppCompatActivity {
                 startActivity(intent);
                 break;
             case R.id.action_incidents_sortDate:
+                adapter_list_incidents.sortIncident(TYPE_INCIDENT_DATE);
                 break;
             case R.id.action_incidents_sortTitle:
+                adapter_list_incidents.sortIncident(TYPE_INCIDENT_TITLE);
+                break;
+            case R.id.action_incidents_sortAuthor:
+                adapter_list_incidents.sortIncident(TYPE_INCIDENT_AUTHOR);
                 break;
         }
         return super.onOptionsItemSelected(item);

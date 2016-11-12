@@ -10,7 +10,7 @@ import java.util.UUID;
  * <p>
  * BD point of a meeting
  */
-public class Model_Point implements Comparable<Model_Point> {
+public class Model_Point {
     private String po_id;
     private int po_meeting;
     private String po_title;
@@ -43,17 +43,6 @@ public class Model_Point implements Comparable<Model_Point> {
     @Override
     public String toString() {
         return "Point: " + po_title;
-    }
-
-    /**
-     * Point comparable method
-     *
-     * @param another Point to compate
-     * @return Wich one is higher
-     */
-    @Override
-    public int compareTo(@NonNull Model_Point another) {
-        return this.getPo_title().toUpperCase().compareTo(another.getPo_title().toUpperCase());
     }
 
     /**

@@ -9,7 +9,7 @@ import java.util.Comparator;
  * <p>
  * BD community
  */
-public class Model_Community implements Comparable<Model_Community> {
+public class Model_Community {
     private int co_id;
     private String co_locality;
     private String co_municipality;
@@ -72,29 +72,6 @@ public class Model_Community implements Comparable<Model_Community> {
                 + co_postal + " (postal), "
                 + co_address + " n" + co_number + " (address), "
                 + co_admin_name + " (admin)";
-    }
-
-    /**
-     * Community comparable method
-     *
-     * @param another Community to compare
-     * @return Wich one is higher
-     */
-    @Override
-    public int compareTo(@NonNull Model_Community another) {
-        if (this.getCo_postal().toUpperCase().compareTo(another.getCo_postal().toUpperCase()) == 0) {
-            if (this.getCo_address().toUpperCase().compareTo(another.getCo_address().toUpperCase()) == 0) {
-                if (this.getCo_number().toUpperCase().compareTo(another.getCo_number().toUpperCase()) == 0) {
-                    return this.getCo_block().toUpperCase().compareTo(another.getCo_block().toUpperCase());
-                } else {
-                    return this.getCo_number().toUpperCase().compareTo(another.getCo_number().toUpperCase());
-                }
-            } else {
-                return this.getCo_address().toUpperCase().compareTo(another.getCo_address().toUpperCase());
-            }
-        } else {
-            return this.getCo_postal().toUpperCase().compareTo(another.getCo_postal().toUpperCase());
-        }
     }
 
     /**

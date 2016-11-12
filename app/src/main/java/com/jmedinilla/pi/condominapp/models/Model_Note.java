@@ -11,7 +11,7 @@ import java.util.UUID;
  * <p>
  * BD note for the community diary
  */
-public class Model_Note implements Comparable<Model_Note> {
+public class Model_Note {
     private String no_id;
     private int no_community;
     private Date no_date;
@@ -48,17 +48,6 @@ public class Model_Note implements Comparable<Model_Note> {
     @Override
     public String toString() {
         return "Note: " + no_title + " (" + no_date.toString() + ")";
-    }
-
-    /**
-     * Note comparable method
-     *
-     * @param another Note to compare
-     * @return Wich one is higher
-     */
-    @Override
-    public int compareTo(@NonNull Model_Note another) {
-        return this.getNo_title().toUpperCase().compareTo(another.getNo_title().toUpperCase());
     }
 
     /**

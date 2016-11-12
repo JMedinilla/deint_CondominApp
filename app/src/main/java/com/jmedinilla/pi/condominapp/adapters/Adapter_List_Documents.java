@@ -21,12 +21,23 @@ import java.util.List;
  */
 public class Adapter_List_Documents extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
+    private static final int TYPE_DOCUMENT_TITLE = 20;
+    private static boolean ASC_TITLE = true;
+
     private List<Model_Document> documents;
     private Context ctxt;
 
     public Adapter_List_Documents(Context context) {
         this.ctxt = context;
         this.documents = new ArrayList<>(((ModelApplication) ctxt.getApplicationContext()).getDocuments());
+    }
+
+    public void sortDocument(int type) {
+        boolean ASC = false;
+
+        if (type == TYPE_DOCUMENT_TITLE) { ASC = ASC_TITLE; ASC_TITLE = !ASC_TITLE; }
+
+        getAllDocuments(((ModelApplication)ctxt.getApplicationContext()).getDocuments(ASC, type));
     }
 
     @Override
@@ -97,9 +108,9 @@ public class Adapter_List_Documents extends RecyclerView.Adapter<RecyclerView.Vi
         }
     }
 
-    public void getAllDocuments(List<Model_Document> documents) {
+    private void getAllDocuments(List<Model_Document> documentsP) {
         this.documents.clear();
-        this.documents.addAll(documents);
+        this.documents.addAll(documentsP);
         notifyDataSetChanged();
     }
 

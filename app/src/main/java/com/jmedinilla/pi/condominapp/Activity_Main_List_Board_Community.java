@@ -15,6 +15,9 @@ import com.jmedinilla.pi.condominapp.forms.Form_Board_Community;
 
 public class Activity_Main_List_Board_Community extends AppCompatActivity {
 
+    private static final int TYPE_ENTRY_TITLE = 30;
+    private static final int TYPE_ENTRY_DATE = 31;
+
     private RelativeLayout main_board_community;
     private AutoCompleteTextView main_cboard_atxtSearch;
     private RecyclerView main_cboard_rcvCboard;
@@ -60,8 +63,10 @@ public class Activity_Main_List_Board_Community extends AppCompatActivity {
                 startActivity(intent);
                 break;
             case R.id.action_cboard_sortDate:
+                adapter_list_board_community.sortCboard(TYPE_ENTRY_DATE);
                 break;
             case R.id.action_cboard_sortTitle:
+                adapter_list_board_community.sortCboard(TYPE_ENTRY_TITLE);
                 break;
         }
         return super.onOptionsItemSelected(item);
