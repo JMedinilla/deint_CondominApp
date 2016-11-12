@@ -74,7 +74,7 @@ public class Activity_Login_Main extends AppCompatActivity {
                 final AlertDialog.Builder builder = new AlertDialog.Builder(Activity_Login_Main.this);
                 LayoutInflater inflater = getLayoutInflater();
                 View dialoglayout = inflater.inflate(R.layout.dialog_about, null);
-                builder.setTitle("About...").setCancelable(false);
+                builder.setCancelable(false);
                 builder.setView(dialoglayout);
                 builder.setPositiveButton(R.string.about_btnClose, new DialogInterface.OnClickListener() {
                     @Override

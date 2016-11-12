@@ -36,10 +36,11 @@ public class Activity_Home extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         Intent intent;
         switch (item.getItemId()) {
+            /*
             case R.id.action_home_profile:
                 intent = new Intent(Activity_Home.this, Activity_Main_Profile.class);
                 startActivity(intent);
-                break;
+                break;*/
             case R.id.action_home_settings:
                 intent = new Intent(Activity_Home.this, Activity_Main_Settings.class);
                 startActivity(intent);
@@ -48,7 +49,7 @@ public class Activity_Home extends AppCompatActivity {
                 final AlertDialog.Builder builder = new AlertDialog.Builder(Activity_Home.this);
                 LayoutInflater inflater = getLayoutInflater();
                 View dialoglayout = inflater.inflate(R.layout.dialog_about, null);
-                builder.setTitle("About...").setCancelable(false);
+                builder.setCancelable(false);
                 builder.setView(dialoglayout);
                 builder.setPositiveButton(R.string.about_btnClose, new DialogInterface.OnClickListener() {
                     @Override
