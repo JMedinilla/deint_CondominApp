@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_login_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.jmedinilla.pi.condominapp.Activity_Login_Main">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:baselineAligned="false"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/login_main_txtTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="8dp"
+                android:text="@string/app_title"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="28sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/login_main_imgLogo"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_below="@id/login_main_txtTitle"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="8dp"
+                android:contentDescription="@string/contentdescription_imageview"
+                app:srcCompat="@drawable/applogo" />
+
+            <TextView
+                android:id="@+id/login_main_txtWelcome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/login_main_imgLogo"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="16dp"
+                android:text="@string/app_welcome"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/login_main_txtInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/login_main_txtWelcome"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="28sp"
+                android:text="@string/login_main_txtInfo"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="16sp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/login_main_btnJoin"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="240dp"
+                android:layout_height="38dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:onClick="getOnClickLoginMain"
+                android:text="@string/login_main_btnJoin" />
+
+            <LinearLayout
+                android:id="@+id/login_main_linearGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/login_main_btnJoin"
+                android:layout_alignParentStart="true"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/login_main_tilKey"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    app:errorEnabled="true"
+                    app:errorTextAppearance="@style/error"
+                    app:hintEnabled="true"
+                    app:hintTextAppearance="@style/hint">
+
+                    <EditText
+                        android:id="@+id/login_main_edtKey"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:hint="@string/login_main_edtKey"
+                        android:inputType="text"
+                        android:labelFor="@+id/login_main_edtKey"
+                        android:textColor="@color/colorPrimary" />
+
+                </android.support.design.widget.TextInputLayout>
+
+                <Button
+                    android:id="@+id/login_main_btnScan"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:layout_weight="1"
+                    android:drawableStart="@android:drawable/ic_menu_camera"
+                    android:onClick="getOnClickLoginMain"
+                    android:text="@string/login_main_btnScan" />
+
+            </LinearLayout>
+
+            <CheckBox
+                android:id="@+id/login_main_chbRemember"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/login_main_btnJoin"
+                android:text="@string/login_main_chbRemember"
+                android:textColor="@color/colorPrimary"
+                android:textSize="12sp" />
+
+            <CheckBox
+                android:id="@+id/login_main_chbStay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/login_main_chbRemember"
+                android:text="@string/login_main_chbStay"
+                android:textColor="@color/colorPrimary"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/login_main_btnLost"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="240dp"
+                android:layout_height="38dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:enabled="false"
+                android:onClick="getOnClickLoginMain"
+                android:text="@string/login_main_btnLost" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

@@ -103,7 +103,8 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/login_main_btnJoin"
         android:text="@string/login_main_chbRemember"
-        android:textColor="@color/colorPrimary" />
+        android:textColor="@color/colorPrimary"
+        android:textSize="12sp" />
 
     <CheckBox
         android:id="@+id/login_main_chbStay"
@@ -111,7 +112,8 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/login_main_chbRemember"
         android:text="@string/login_main_chbStay"
-        android:textColor="@color/colorPrimary" />
+        android:textColor="@color/colorPrimary"
+        android:textSize="12sp" />
 
     <Button
         android:id="@+id/login_main_btnJoin"
