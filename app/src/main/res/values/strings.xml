@@ -41,4 +41,5 @@
     <string name="about_description">CondominApp creator</string>
     <string name="about_title">Javier Medinilla</string>
     <string name="about_btnClose">CLOSE</string>
+    <string name="app_invalid_user">User doesn\'t exist</string>
 </resources>

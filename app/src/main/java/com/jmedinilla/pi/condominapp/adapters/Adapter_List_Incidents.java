@@ -40,11 +40,18 @@ public class Adapter_List_Incidents extends RecyclerView.Adapter<RecyclerView.Vi
     public void sortIncident(int type) {
         boolean ASC = false;
 
-        if (type == TYPE_INCIDENT_TITLE) { ASC = ASC_TITLE; ASC_TITLE = !ASC_TITLE; }
-        else if (type == TYPE_INCIDENT_DATE) { ASC = ASC_DATE; ASC_DATE = !ASC_DATE; }
-        else if (type == TYPE_INCIDENT_AUTHOR) { ASC = ASC_AUTHOR; ASC_AUTHOR = !ASC_AUTHOR; }
+        if (type == TYPE_INCIDENT_TITLE) {
+            ASC = ASC_TITLE;
+            ASC_TITLE = !ASC_TITLE;
+        } else if (type == TYPE_INCIDENT_DATE) {
+            ASC = ASC_DATE;
+            ASC_DATE = !ASC_DATE;
+        } else if (type == TYPE_INCIDENT_AUTHOR) {
+            ASC = ASC_AUTHOR;
+            ASC_AUTHOR = !ASC_AUTHOR;
+        }
 
-        getAllIncidents(((ModelApplication)ctxt.getApplicationContext()).getIncidents(ASC, type));
+        getAllIncidents(((ModelApplication) ctxt.getApplicationContext()).getIncidents(ASC, type));
     }
 
     @Override
@@ -84,13 +91,23 @@ public class Adapter_List_Incidents extends RecyclerView.Adapter<RecyclerView.Vi
             //image
             holderLeft.incidentTitleLeft.setText(incidents.get(position).getIn_title());
             holderLeft.incidentDateLeft.setText(day + " " + month + " " + year);
-            holderLeft.incidentAuthorLeft.setText(incidents.get(position).getIn_user().getUs_name());
+            holderLeft.incidentAuthorLeft.setText(
+                    incidents.get(position).getIn_user().getUs_name()
+                            + " ("
+                            + incidents.get(position).getIn_user().getUs_floor()
+                            + incidents.get(position).getIn_user().getUs_door()
+                            + ")");
         } else {
             IncidentViewHolderRight holderRight = (IncidentViewHolderRight) holder;
             //image
             holderRight.incidentTitleRight.setText(incidents.get(position).getIn_title());
             holderRight.incidentDateRight.setText(day + " " + month + " " + year);
-            holderRight.incidentAuthorRight.setText(incidents.get(position).getIn_user().getUs_name());
+            holderRight.incidentAuthorRight.setText(
+                    incidents.get(position).getIn_user().getUs_name()
+                            + " ("
+                            + incidents.get(position).getIn_user().getUs_floor()
+                            + incidents.get(position).getIn_user().getUs_door()
+                            + ")");
         }
     }
 

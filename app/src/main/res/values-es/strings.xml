@@ -36,4 +36,5 @@
     <string name="app_incidents">Incidencias</string>
     <string name="app_information">Información</string>
     <string name="app_meetings">Juntas</string>
+    <string name="app_invalid_user">El usuario no existe</string>
 </resources>
