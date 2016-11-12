@@ -17,7 +17,7 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="8dp"
-        android:text="@string/login_main_txtTitle"
+        android:text="@string/app_title"
         android:textColor="@color/colorPrimaryDark"
         android:textSize="28sp"
         android:textStyle="bold" />
@@ -39,7 +39,7 @@
         android:layout_below="@id/login_main_imgLogo"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="16dp"
-        android:text="@string/login_main_txtWelcome"
+        android:text="@string/app_welcome"
         android:textColor="@color/colorPrimaryDark"
         android:textSize="16sp" />
 
@@ -96,6 +96,22 @@
             android:text="@string/login_main_btnScan" />
 
     </LinearLayout>
+
+    <CheckBox
+        android:id="@+id/login_main_chbRemember"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/login_main_btnJoin"
+        android:text="@string/login_main_chbRemember"
+        android:textColor="@color/colorPrimary" />
+
+    <CheckBox
+        android:id="@+id/login_main_chbStay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/login_main_chbRemember"
+        android:text="@string/login_main_chbStay"
+        android:textColor="@color/colorPrimary" />
 
     <Button
         android:id="@+id/login_main_btnJoin"

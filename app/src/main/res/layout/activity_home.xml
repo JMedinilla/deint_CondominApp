@@ -28,7 +28,7 @@
         android:layout_above="@id/home_imgLogo"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="8dp"
-        android:text="@string/home_txtTitle"
+        android:text="@string/app_title"
         android:textColor="@color/colorPrimaryDark"
         android:textSize="28sp"
         android:textStyle="bold" />
@@ -40,7 +40,7 @@
         android:layout_below="@id/home_imgLogo"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="16dp"
-        android:text="@string/home_txtWelcome"
+        android:text="@string/app_welcome"
         android:textColor="@color/colorPrimaryDark"
         android:textSize="16sp" />
 
@@ -87,7 +87,7 @@
             android:layout_height="wrap_content"
             android:onClick="getOnClickHome"
             android:src="@android:drawable/ic_menu_directions"
-            app:fab_label="     Information      "
+            app:fab_label="@string/app_information"
             app:fab_size="mini" />
 
         <com.github.clans.fab.FloatingActionButton
@@ -96,7 +96,7 @@
             android:layout_height="wrap_content"
             android:onClick="getOnClickHome"
             android:src="@android:drawable/ic_menu_directions"
-            app:fab_label="         Meetings       "
+            app:fab_label="@string/app_meetings"
             app:fab_size="mini" />
 
         <com.github.clans.fab.FloatingActionButton
@@ -105,7 +105,7 @@
             android:layout_height="wrap_content"
             android:onClick="getOnClickHome"
             android:src="@android:drawable/ic_menu_directions"
-            app:fab_label="      Documents     "
+            app:fab_label="@string/app_documents"
             app:fab_size="mini" />
 
         <com.github.clans.fab.FloatingActionButton
@@ -114,7 +114,7 @@
             android:layout_height="wrap_content"
             android:onClick="getOnClickHome"
             android:src="@android:drawable/ic_menu_directions"
-            app:fab_label="Community board"
+            app:fab_label="@string/app_cboard"
             app:fab_size="mini" />
 
         <com.github.clans.fab.FloatingActionButton
@@ -123,7 +123,7 @@
             android:layout_height="wrap_content"
             android:onClick="getOnClickHome"
             android:src="@android:drawable/ic_menu_directions"
-            app:fab_label="          Board             "
+            app:fab_label="@string/app_board"
             app:fab_size="mini" />
 
         <com.github.clans.fab.FloatingActionButton
@@ -132,7 +132,7 @@
             android:layout_height="wrap_content"
             android:onClick="getOnClickHome"
             android:src="@android:drawable/ic_menu_directions"
-            app:fab_label="           Diary             "
+            app:fab_label="@string/app_diary"
             app:fab_size="mini" />
 
         <com.github.clans.fab.FloatingActionButton
@@ -141,7 +141,7 @@
             android:layout_height="wrap_content"
             android:onClick="getOnClickHome"
             android:src="@android:drawable/ic_menu_directions"
-            app:fab_label="        Incidents        "
+            app:fab_label="@string/app_incidents"
             app:fab_size="mini" />
 
 

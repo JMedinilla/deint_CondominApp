@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">CondominApp</string>
+    <string name="about_btnClose">CERRAR</string>
+    <string name="about_description">Creador de CondominApp</string>
+    <string name="about_git">JMedinilla/CondominApp</string>
+    <string name="about_title">Javier Medinilla</string>
+    <string name="action_about">Acerca de</string>
+    <string name="action_incidents_sortAuthor">Ordenar por autor</string>
+    <string name="action_profile">Perfil</string>
+    <string name="action_settings">Configuración</string>
+    <string name="app_add">Añadir</string>
+    <string name="app_search">Buscar…</string>
+    <string name="app_sortDate">Ordenar por fecha</string>
+    <string name="app_sortTitle">Ordenar por título</string>
+    <string name="app_title">CONDOMINAPP</string>
+    <string name="app_welcome">Bienvenido a CondominApp</string>
+    <string name="contentdescription_imageview">contentDescription_imageview</string>
+    <string name="login_admin_txtInfo">Elige una comunidad:</string>
+    <string name="login_info_btnClose">Cerrar</string>
+    <string name="login_info_txtInfo">Contacta con el administrador para recuperar la clave</string>
+    <string name="login_info_txtMail">Correo:</string>
+    <string name="login_info_txtPhone">Teléfono:</string>
+    <string name="login_main_btnJoin">Entrar</string>
+    <string name="login_main_btnLost">Clave perdida</string>
+    <string name="login_main_btnScan">QR</string>
+    <string name="login_main_chbRemember">Recordar la clave de acceso</string>
+    <string name="login_main_chbStay">Mantener la sesión abierta</string>
+    <string name="login_main_edtKey">Clave de acceso</string>
+    <string name="login_main_txtInfo">Usa la clave recibida por el administrador para entrar:</string>
+    <string name="placeholder">[PLACEHOLDER]</string>
+    <string name="app_board">Tablón</string>
+    <string name="app_cboard">Tablón comunitario</string>
+    <string name="app_diary">Agenda</string>
+    <string name="app_documents">Documentos</string>
+    <string name="app_incidents">Incidencias</string>
+    <string name="app_information">Información</string>
+    <string name="app_meetings">Juntas</string>
+</resources>

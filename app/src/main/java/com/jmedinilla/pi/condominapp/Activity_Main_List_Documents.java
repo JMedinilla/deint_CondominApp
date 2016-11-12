@@ -76,5 +76,6 @@ public class Activity_Main_List_Documents extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
+        adapter_list_documents.documentAddedNotify();
     }
 }

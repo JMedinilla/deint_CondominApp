@@ -13,8 +13,13 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.RelativeLayout;
+
+import com.jmedinilla.pi.condominapp.preferences.Preferences_General;
+import com.jmedinilla.pi.condominapp.preferences.Preferences_Profile;
 
 public class Activity_Login_Main extends AppCompatActivity {
 
@@ -22,13 +27,30 @@ public class Activity_Login_Main extends AppCompatActivity {
     private TextInputLayout login_main_tilKey;
     private EditText login_main_edtKey;
     private Button login_main_btnLost;
+    private CheckBox login_main_chbRemember;
+    private CheckBox login_main_chbStay;
+    private Preferences_General preferences_general;
+    private Preferences_Profile preferences_profile;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_main);
 
+        preferences_general = new Preferences_General(Activity_Login_Main.this);
+        preferences_profile = new Preferences_Profile(Activity_Login_Main.this);
+
         initializeComponents();
+
+        if (preferences_general.getStay()) {
+            startActivity(new Intent(Activity_Login_Main.this, Activity_Home.class));
+            finish();
+        }
+        else {
+            if (preferences_general.getRemember()) {
+                login_main_edtKey.setText(preferences_profile.getAccess());
+            }
+        }
     }
 
     @Override
@@ -63,6 +85,11 @@ public class Activity_Login_Main extends AppCompatActivity {
         login_main_tilKey = (TextInputLayout) findViewById(R.id.login_main_tilKey);
         login_main_edtKey = (EditText) findViewById(R.id.login_main_edtKey);
         login_main_btnLost = (Button) findViewById(R.id.login_main_btnLost);
+        login_main_chbRemember = (CheckBox) findViewById(R.id.login_main_chbRemember);
+        login_main_chbStay = (CheckBox) findViewById(R.id.login_main_chbStay);
+
+        login_main_chbRemember.setChecked(preferences_general.getRemember());
+        login_main_chbStay.setChecked(preferences_general.getStay());
 
         login_main_edtKey.addTextChangedListener(new TextWatcher() {
             @Override
@@ -81,19 +108,18 @@ public class Activity_Login_Main extends AppCompatActivity {
             }
         });
 
-        /**
-         * Hay que comprobar si en las preferencias hay un ID
-         * de comunidad al que ya se haya conectado el usuario
-         * anteriormente. Si existe, hay que activar el botón
-         * btnLost, que llevaría a la ventana de información
-         * donde se puede ver el nombre, teléfono y correo
-         * del administrador, que está desactivado por defecto
-         * ya que si no ha habido nunca una conexión, no hay
-         * datos que mostrar, obviamente
-         */
-        /*
-        login_main_btnLost.setEnabled(true);
-        */
+        login_main_chbRemember.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                preferences_general.setRemember(isChecked);
+            }
+        });
+        login_main_chbStay.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                preferences_general.setStay(isChecked);
+            }
+        });
     }
 
     public void getOnClickLoginMain(View view) {
@@ -102,18 +128,14 @@ public class Activity_Login_Main extends AppCompatActivity {
                 //
                 break;
             case R.id.login_main_btnJoin:
-                //Comprobar que existe el usuario introducido en el EditText y coger
-                //el ID de la comunidad, necesario para las próximas ventanas, pero
-                //como no hay base de datos, por ahora todos los datos son falsos
-
                 //Si el usuario tiene categoría de administrador, se le pasa a la
                 //ventana de selección de comunidad
                 /*
                 startActivity(new Intent(Activity_Login_Main.this, Activity_Login_Admin.class));
                 finish();
                 */
-
                 //Si es un vecino, pos palante y tal
+                preferences_profile.setAccess(login_main_edtKey.getText().toString());
                 startActivity(new Intent(Activity_Login_Main.this, Activity_Home.class));
                 finish();
                 break;

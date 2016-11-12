@@ -62,8 +62,6 @@ public class ModelApplication extends Application {
         pointList = new ArrayList<>();
         userList = new ArrayList<>();
 
-        Model_User tmpUser_1 = new Model_User("xdftrcgykdtgykjcftydtydykjdhkdxfhgkdgfhkmjdghkh", 123, "2", "B", "656565656", "correo@correo.com", "Javier Medinilla", Model_User.NEIGHBOUR);
-        Model_User tmpUser_2 = new Model_User("dykdcghymcdgrjeddhkjdghkhftuyodghedcghrlfyuldft", 213, "1", "A", "767676767", "mail@mail.es", "Amador Fernandez", Model_User.PRESIDENT);
         GregorianCalendar calendar_1 = new GregorianCalendar(2016, 4, 4);
         GregorianCalendar calendar_2 = new GregorianCalendar(2015, 5, 16);
         GregorianCalendar calendar_3 = new GregorianCalendar(2016, 1, 10);
@@ -77,6 +75,13 @@ public class ModelApplication extends Application {
         GregorianCalendar calendar_11 = new GregorianCalendar(2016, 10, 13);
         GregorianCalendar calendar_12 = new GregorianCalendar(2016, 10, 23);
 
+        Model_Community tmpComm = new Model_Community(100, "locality", "municipality", "address", "number", "block", "postal", 0, "Javier Medinilla", "dir_Javier", "tlf_Javier", "mail_Javier", "Amador Fernández", "tlfAmador");
+        Model_User tmpUser_1 = new Model_User("aaa", 100, "2", "B", "656565656", "correo@correo.com", "Javier Medinilla", Model_User.ADMINISTRATOR);
+        Model_User tmpUser_2 = new Model_User("bbb", 100, "1", "A", "767676767", "mail@mail.es", "Amador Fernandez", Model_User.PRESIDENT);
+
+        saveCommunity(tmpComm);
+        saveUser(tmpUser_1);
+        saveUser(tmpUser_2);
         saveDocument(new Model_Document(0, "Estatutos", "Estatutos de la comunidad actualizados", "asdfasdfasdfasdfasdfasdfasdf"));
         saveDocument(new Model_Document(1, "Normativa ruidos", "Normativa del ayuntamiento sobre ruidos", "asdfasdfasdfasdfasdfasdfasdf"));
         saveDocument(new Model_Document(2, "Acta junta 16/5/15", "Acta de la junta celebrada el 16 de junio de 2015", "asdfasdfasdfasdfasdfasdfasdf"));

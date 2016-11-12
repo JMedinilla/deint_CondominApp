@@ -9,13 +9,13 @@ import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.RelativeLayout;
 
 import com.github.clans.fab.FloatingActionMenu;
+import com.jmedinilla.pi.condominapp.preferences.Preferences_General;
+import com.jmedinilla.pi.condominapp.preferences.Preferences_Profile;
 
 public class Activity_Home extends AppCompatActivity {
 
-    private RelativeLayout home;
     private FloatingActionMenu home_btnMenu;
 
     @Override
@@ -63,7 +63,6 @@ public class Activity_Home extends AppCompatActivity {
     }
 
     private void initializeComponents() {
-        home = (RelativeLayout) findViewById(R.id.activity_home);
         home_btnMenu = (FloatingActionMenu) findViewById(R.id.home_btnMenu);
     }
 

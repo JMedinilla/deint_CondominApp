@@ -84,5 +84,6 @@ public class Activity_Main_List_Incidents extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
+        adapter_list_incidents.incidentAddedNotify();
     }
 }

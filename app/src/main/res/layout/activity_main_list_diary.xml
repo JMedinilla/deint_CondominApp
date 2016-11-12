@@ -17,7 +17,7 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="6dp"
-        android:text="@string/main_diary_txtTitle"
+        android:text="@string/app_diary"
         android:textColor="@color/colorPrimaryDark"
         android:textSize="22sp" />
 
@@ -27,7 +27,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/main_diary_txtTitle"
         android:gravity="center"
-        android:hint="@string/main_diary_atxtSearch"
+        android:hint="@string/app_search"
         android:labelFor="@+id/main_diary_atxtSearch" />
 
     <android.support.v7.widget.RecyclerView

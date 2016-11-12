@@ -80,5 +80,6 @@ public class Activity_Main_List_Board extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
+        adapter_list_board.entryAddedNotify();
     }
 }

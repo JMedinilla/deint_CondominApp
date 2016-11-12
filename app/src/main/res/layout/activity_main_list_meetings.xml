@@ -17,7 +17,7 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="6dp"
-        android:text="@string/main_meetings_txtTitle"
+        android:text="@string/app_meetings"
         android:textColor="@color/colorPrimaryDark"
         android:textSize="22sp" />
 
@@ -27,10 +27,10 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/main_meetings_txtTitle"
         android:gravity="center"
-        android:hint="@string/main_meetings_atxtSearch"
+        android:hint="@string/app_search"
         android:labelFor="@+id/main_meetings_atxtSearch" />
 
-    <android.support.v7.widget.RecyclerView
+    <ListView
         android:id="@+id/main_meetings_rcvMeetings"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
