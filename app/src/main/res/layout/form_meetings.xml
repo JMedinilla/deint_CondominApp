@@ -10,4 +10,30 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.jmedinilla.pi.condominapp.forms.Form_Meetings">
 
+    <TextView
+        android:id="@+id/formMeeting_txtTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/formMeeting_txtTitle"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="24sp" />
+
+    <ImageView
+        android:id="@+id/formMeeting_btnAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:contentDescription="@string/contentdescription_imageview"
+        android:src="@android:drawable/ic_input_add" />
+
+    <CalendarView
+        android:id="@+id/formMeeting_calendar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/formMeeting_btnAdd"
+        android:layout_centerHorizontal="true" />
+
 </RelativeLayout>

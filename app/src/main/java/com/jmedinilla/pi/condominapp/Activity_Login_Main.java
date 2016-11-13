@@ -3,7 +3,6 @@ package com.jmedinilla.pi.condominapp;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-import android.provider.ContactsContract;
 import android.support.design.widget.Snackbar;
 import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AlertDialog;
@@ -14,11 +13,9 @@ import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
-import android.widget.RelativeLayout;
 
 import com.jmedinilla.pi.condominapp.models.Model_User;
 import com.jmedinilla.pi.condominapp.preferences.Preferences_General;
@@ -28,10 +25,8 @@ import java.util.List;
 
 public class Activity_Login_Main extends AppCompatActivity {
 
-    private RelativeLayout login_main;
     private TextInputLayout login_main_tilKey;
     private EditText login_main_edtKey;
-    private Button login_main_btnLost;
     private CheckBox login_main_chbRemember;
     private CheckBox login_main_chbStay;
     private Preferences_General preferences_general;
@@ -89,10 +84,8 @@ public class Activity_Login_Main extends AppCompatActivity {
     }
 
     private void initializeComponents() {
-        login_main = (RelativeLayout) findViewById(R.id.activity_login_main);
         login_main_tilKey = (TextInputLayout) findViewById(R.id.login_main_tilKey);
         login_main_edtKey = (EditText) findViewById(R.id.login_main_edtKey);
-        login_main_btnLost = (Button) findViewById(R.id.login_main_btnLost);
         login_main_chbRemember = (CheckBox) findViewById(R.id.login_main_chbRemember);
         login_main_chbStay = (CheckBox) findViewById(R.id.login_main_chbStay);
 
@@ -150,11 +143,6 @@ public class Activity_Login_Main extends AppCompatActivity {
                 */
                 //Si es un vecino, pos palante y tal
                 neighboutLogin(login_main_edtKey.getText().toString());
-                break;
-            case R.id.login_main_btnLost:
-                //Hay que enviar también el ID de la comunidad para que lea los datos
-                //a mostrar en la siguiente ventana
-                startActivity(new Intent(Activity_Login_Main.this, Activity_Login_Information.class));
                 break;
         }
     }

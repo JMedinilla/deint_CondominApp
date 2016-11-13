@@ -20,6 +20,6 @@ public interface IDiary {
      * The method validates the data in the components
      */
     interface Presenter {
-        boolean validateDiary(Date no_date, String no_title, String no_content);
+        boolean validateDiary(String no_title, String no_content);
     }
 }

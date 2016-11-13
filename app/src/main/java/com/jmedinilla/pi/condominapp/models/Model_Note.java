@@ -1,7 +1,5 @@
 package com.jmedinilla.pi.condominapp.models;
 
-import android.support.annotation.NonNull;
-
 import java.util.Comparator;
 import java.util.Date;
 import java.util.UUID;
@@ -35,9 +33,8 @@ public class Model_Note {
             //The object has to be a Note
             if (obj instanceof Model_Note) {
                 Model_Note another = (Model_Note) obj;
-                //If the Date and Title are equals, it's the same note
-                if (this.getNo_date().equals(another.getNo_date())
-                        && this.getNo_title().toUpperCase().equals(another.getNo_title().toUpperCase())) {
+                //If the Title are equals, it's the same note
+                if (this.getNo_title().toUpperCase().equals(another.getNo_title().toUpperCase())) {
                     result = true;
                 }
             }

@@ -1,9 +1,6 @@
 package com.jmedinilla.pi.condominapp.models;
 
-import android.support.annotation.NonNull;
-
 import java.util.Comparator;
-import java.util.UUID;
 
 /**
  * Class created by JMedinilla on 2016-10-29

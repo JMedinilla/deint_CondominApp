@@ -75,7 +75,7 @@ public class ModelApplication extends Application {
         GregorianCalendar calendar_11 = new GregorianCalendar(2016, 10, 13);
         GregorianCalendar calendar_12 = new GregorianCalendar(2016, 10, 23);
 
-        Model_Community tmpComm = new Model_Community(100, "locality", "municipality", "address", "number", "block", "postal", 0, "Javier Medinilla", "dir_Javier", "tlf_Javier", "mail_Javier", "Amador Fernández", "tlfAmador");
+        Model_Community tmpComm = new Model_Community(100, "locality", "municipality", "address", "number", "block", "postal", 18, "Javier Medinilla", "Calle Falsa n123 2C", "123654879", "javier@correo.org", "Amador Fernández", "987123645");
         Model_User tmpUser_1 = new Model_User("aaa", 100, "2", "B", "656565656", "correo@correo.com", "Javier Medinilla", Model_User.ADMINISTRATOR);
         Model_User tmpUser_2 = new Model_User("bbb", 100, "1", "A", "767676767", "mail@mail.es", "Amador Fernandez", Model_User.PRESIDENT);
 
@@ -177,24 +177,39 @@ public class ModelApplication extends Application {
     public List<Model_Community> getCommunities(boolean asc, int type) {
         switch (type) {
             case TYPE_COMMUNITY_ID:
-                if (asc) { Collections.sort(communityList, Model_Community.COMPARATOR_COMMUNITY_ID_ASC); }
-                else { Collections.sort(communityList, Model_Community.COMPARATOR_COMMUNITY_ID_DES); }
+                if (asc) {
+                    Collections.sort(communityList, Model_Community.COMPARATOR_COMMUNITY_ID_ASC);
+                } else {
+                    Collections.sort(communityList, Model_Community.COMPARATOR_COMMUNITY_ID_DES);
+                }
                 break;
             case TYPE_COMMUNITY_LOCALITY:
-                if (asc) { Collections.sort(communityList, Model_Community.COMPARATOR_COMMUNITY_LOCALITY_ASC); }
-                else { Collections.sort(communityList, Model_Community.COMPARATOR_COMMUNITY_LOCALITY_DES); }
+                if (asc) {
+                    Collections.sort(communityList, Model_Community.COMPARATOR_COMMUNITY_LOCALITY_ASC);
+                } else {
+                    Collections.sort(communityList, Model_Community.COMPARATOR_COMMUNITY_LOCALITY_DES);
+                }
                 break;
             case TYPE_COMMUNITY_MUNICIPALITY:
-                if (asc) { Collections.sort(communityList, Model_Community.COMPARATOR_COMMUNITY_MUNICIPALITY_ASC); }
-                else { Collections.sort(communityList, Model_Community.COMPARATOR_COMMUNITY_MUNICIPALITY_DES); }
+                if (asc) {
+                    Collections.sort(communityList, Model_Community.COMPARATOR_COMMUNITY_MUNICIPALITY_ASC);
+                } else {
+                    Collections.sort(communityList, Model_Community.COMPARATOR_COMMUNITY_MUNICIPALITY_DES);
+                }
                 break;
             case TYPE_COMMUNITY_POSTAL:
-                if (asc) { Collections.sort(communityList, Model_Community.COMPARATOR_COMMUNITY_POSTAL_ASC); }
-                else { Collections.sort(communityList, Model_Community.COMPARATOR_COMMUNITY_POSTAL_DES); }
+                if (asc) {
+                    Collections.sort(communityList, Model_Community.COMPARATOR_COMMUNITY_POSTAL_ASC);
+                } else {
+                    Collections.sort(communityList, Model_Community.COMPARATOR_COMMUNITY_POSTAL_DES);
+                }
                 break;
             case TYPE_COMMUNITY_APARTMENTS:
-                if (asc) { Collections.sort(communityList, Model_Community.COMPARATOR_COMMUNITY_APARTMENTS_ASC); }
-                else { Collections.sort(communityList, Model_Community.COMPARATOR_COMMUNITY_APARTMENTS_DES); }
+                if (asc) {
+                    Collections.sort(communityList, Model_Community.COMPARATOR_COMMUNITY_APARTMENTS_ASC);
+                } else {
+                    Collections.sort(communityList, Model_Community.COMPARATOR_COMMUNITY_APARTMENTS_DES);
+                }
                 break;
         }
         return communityList;
@@ -203,8 +218,11 @@ public class ModelApplication extends Application {
     public List<Model_Document> getDocuments(boolean asc, int type) {
         switch (type) {
             case TYPE_DOCUMENT_TITLE:
-                if (asc) { Collections.sort(documentList, Model_Document.COMPARATOR_DOCUMENT_TITLE_ASC); }
-                else { Collections.sort(documentList, Model_Document.COMPARATOR_DOCUMENT_TITLE_DES); }
+                if (asc) {
+                    Collections.sort(documentList, Model_Document.COMPARATOR_DOCUMENT_TITLE_ASC);
+                } else {
+                    Collections.sort(documentList, Model_Document.COMPARATOR_DOCUMENT_TITLE_DES);
+                }
                 break;
         }
         return documentList;
@@ -213,12 +231,18 @@ public class ModelApplication extends Application {
     public List<Model_Entry> getFirstEntries(boolean asc, int type) {
         switch (type) {
             case TYPE_ENTRY_TITLE:
-                if (asc) { Collections.sort(entryFirstList, Model_Entry.COMPARATOR_ENTRY_TITLE_ASC); }
-                else { Collections.sort(entryFirstList, Model_Entry.COMPARATOR_ENTRY_TITLE_DES); }
+                if (asc) {
+                    Collections.sort(entryFirstList, Model_Entry.COMPARATOR_ENTRY_TITLE_ASC);
+                } else {
+                    Collections.sort(entryFirstList, Model_Entry.COMPARATOR_ENTRY_TITLE_DES);
+                }
                 break;
             case TYPE_ENTRY_DATE:
-                if (asc) { Collections.sort(entryFirstList, Model_Entry.COMPARATOR_ENTRY_DATE_ASC); }
-                else { Collections.sort(entryFirstList, Model_Entry.COMPARATOR_ENTRY_DATE_DES); }
+                if (asc) {
+                    Collections.sort(entryFirstList, Model_Entry.COMPARATOR_ENTRY_DATE_ASC);
+                } else {
+                    Collections.sort(entryFirstList, Model_Entry.COMPARATOR_ENTRY_DATE_DES);
+                }
                 break;
         }
         return entryFirstList;
@@ -227,12 +251,18 @@ public class ModelApplication extends Application {
     public List<Model_Entry> getSecondEntries(boolean asc, int type) {
         switch (type) {
             case TYPE_ENTRY_TITLE:
-                if (asc) { Collections.sort(entrySecondList, Model_Entry.COMPARATOR_ENTRY_TITLE_ASC); }
-                else { Collections.sort(entrySecondList, Model_Entry.COMPARATOR_ENTRY_TITLE_DES); }
+                if (asc) {
+                    Collections.sort(entrySecondList, Model_Entry.COMPARATOR_ENTRY_TITLE_ASC);
+                } else {
+                    Collections.sort(entrySecondList, Model_Entry.COMPARATOR_ENTRY_TITLE_DES);
+                }
                 break;
             case TYPE_ENTRY_DATE:
-                if (asc) { Collections.sort(entrySecondList, Model_Entry.COMPARATOR_ENTRY_DATE_ASC); }
-                else { Collections.sort(entrySecondList, Model_Entry.COMPARATOR_ENTRY_DATE_DES); }
+                if (asc) {
+                    Collections.sort(entrySecondList, Model_Entry.COMPARATOR_ENTRY_DATE_ASC);
+                } else {
+                    Collections.sort(entrySecondList, Model_Entry.COMPARATOR_ENTRY_DATE_DES);
+                }
                 break;
         }
         return entrySecondList;
@@ -241,16 +271,25 @@ public class ModelApplication extends Application {
     public List<Model_Incident> getIncidents(boolean asc, int type) {
         switch (type) {
             case TYPE_INCIDENT_TITLE:
-                if (asc) { Collections.sort(incidentList, Model_Incident.COMPARATOR_INCIDENT_TITLE_ASC); }
-                else { Collections.sort(incidentList, Model_Incident.COMPARATOR_INCIDENT_TITLE_DES); }
+                if (asc) {
+                    Collections.sort(incidentList, Model_Incident.COMPARATOR_INCIDENT_TITLE_ASC);
+                } else {
+                    Collections.sort(incidentList, Model_Incident.COMPARATOR_INCIDENT_TITLE_DES);
+                }
                 break;
             case TYPE_INCIDENT_DATE:
-                if (asc) { Collections.sort(incidentList, Model_Incident.COMPARATOR_INCIDENT_DATE_ASC); }
-                else { Collections.sort(incidentList, Model_Incident.COMPARATOR_INCIDENT_DATE_DES); }
+                if (asc) {
+                    Collections.sort(incidentList, Model_Incident.COMPARATOR_INCIDENT_DATE_ASC);
+                } else {
+                    Collections.sort(incidentList, Model_Incident.COMPARATOR_INCIDENT_DATE_DES);
+                }
                 break;
             case TYPE_INCIDENT_AUTHOR:
-                if (asc) { Collections.sort(incidentList, Model_Incident.COMPARATOR_INCIDENT_AUTHOR_ASC); }
-                else { Collections.sort(incidentList, Model_Incident.COMPARATOR_INCIDENT_AUTHOR_DES); }
+                if (asc) {
+                    Collections.sort(incidentList, Model_Incident.COMPARATOR_INCIDENT_AUTHOR_ASC);
+                } else {
+                    Collections.sort(incidentList, Model_Incident.COMPARATOR_INCIDENT_AUTHOR_DES);
+                }
                 break;
         }
         return incidentList;
@@ -259,8 +298,11 @@ public class ModelApplication extends Application {
     public List<Model_Meeting> getMeetings(boolean asc, int type) {
         switch (type) {
             case TYPE_MEETING_DATE:
-                if (asc) { Collections.sort(meetingList, Model_Meeting.COMPARATOR_MEETING_DATE_ASC); }
-                else { Collections.sort(meetingList, Model_Meeting.COMPARATOR_MEETING_DATE_DES); }
+                if (asc) {
+                    Collections.sort(meetingList, Model_Meeting.COMPARATOR_MEETING_DATE_ASC);
+                } else {
+                    Collections.sort(meetingList, Model_Meeting.COMPARATOR_MEETING_DATE_DES);
+                }
                 break;
         }
         return meetingList;
@@ -269,12 +311,18 @@ public class ModelApplication extends Application {
     public List<Model_Note> getNotes(boolean asc, int type) {
         switch (type) {
             case TYPE_NOTE_TITLE:
-                if (asc) { Collections.sort(noteList, Model_Note.COMPARATOR_NOTE_TITLE_ASC); }
-                else { Collections.sort(noteList, Model_Note.COMPARATOR_NOTE_TITLE_DES); }
+                if (asc) {
+                    Collections.sort(noteList, Model_Note.COMPARATOR_NOTE_TITLE_ASC);
+                } else {
+                    Collections.sort(noteList, Model_Note.COMPARATOR_NOTE_TITLE_DES);
+                }
                 break;
             case TYPE_NOTE_DATE:
-                if (asc) { Collections.sort(noteList, Model_Note.COMPARATOR_NOTE_DATE_ASC); }
-                else { Collections.sort(noteList, Model_Note.COMPARATOR_NOTE_DATE_DES); }
+                if (asc) {
+                    Collections.sort(noteList, Model_Note.COMPARATOR_NOTE_DATE_ASC);
+                } else {
+                    Collections.sort(noteList, Model_Note.COMPARATOR_NOTE_DATE_DES);
+                }
                 break;
         }
         return noteList;
@@ -283,8 +331,11 @@ public class ModelApplication extends Application {
     public List<Model_Point> getPoints(boolean asc, int type) {
         switch (type) {
             case TYPE_POINT_TITLE:
-                if (asc) { Collections.sort(pointList, Model_Point.COMPARATOR_POINT_TITLE_ASC); }
-                else { Collections.sort(pointList, Model_Point.COMPARATOR_POINT_TITLE_DES); }
+                if (asc) {
+                    Collections.sort(pointList, Model_Point.COMPARATOR_POINT_TITLE_ASC);
+                } else {
+                    Collections.sort(pointList, Model_Point.COMPARATOR_POINT_TITLE_DES);
+                }
                 break;
         }
         return pointList;
@@ -293,12 +344,18 @@ public class ModelApplication extends Application {
     public List<Model_User> getUsers(boolean asc, int type) {
         switch (type) {
             case TYPE_USER_NAME:
-                if (asc) { Collections.sort(userList, Model_User.COMPARATOR_USER_NAME_ASC); }
-                else { Collections.sort(userList, Model_User.COMPARATOR_USER_NAME_DES); }
+                if (asc) {
+                    Collections.sort(userList, Model_User.COMPARATOR_USER_NAME_ASC);
+                } else {
+                    Collections.sort(userList, Model_User.COMPARATOR_USER_NAME_DES);
+                }
                 break;
             case TYPE_USER_PHONE:
-                if (asc) { Collections.sort(userList, Model_User.COMPARATOR_USER_PHONE_ASC); }
-                else { Collections.sort(userList, Model_User.COMPARATOR_USER_PHONE_DES); }
+                if (asc) {
+                    Collections.sort(userList, Model_User.COMPARATOR_USER_PHONE_ASC);
+                } else {
+                    Collections.sort(userList, Model_User.COMPARATOR_USER_PHONE_DES);
+                }
                 break;
         }
         return userList;

@@ -1,7 +1,5 @@
 package com.jmedinilla.pi.condominapp.models;
 
-import android.support.annotation.NonNull;
-
 import java.util.Comparator;
 import java.util.Date;
 import java.util.UUID;

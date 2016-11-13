@@ -42,4 +42,22 @@
     <string name="about_title">Javier Medinilla</string>
     <string name="about_btnClose">CLOSE</string>
     <string name="app_invalid_user">User doesn\'t exist</string>
+    <!-- Forms -->
+    <string name="formBoard_edtTitle">Entry title</string>
+    <string name="formBoard_edtContent">Entry content</string>
+    <string name="formBoard_txtTitle">New Entry</string>
+    <string name="formCboard_txtTitle">New Entry</string>
+    <string name="formCboard_edtTitle">Entry title</string>
+    <string name="formCboard_edtContent">Entry content</string>
+    <string name="formDiary_txtTitle">New Note</string>
+    <string name="formDiary_edtTitle">Note title</string>
+    <string name="formDiary_edtContent">Note content</string>
+    <string name="formDocument_txtTitle">New Document</string>
+    <string name="formDocument_edtTitle">Document title</string>
+    <string name="formDocument_edtDescription">Document description</string>
+    <string name="formDocument_edtLink">Document link</string>
+    <string name="formMeeting_txtTitle">New Meeting</string>
+    <string name="formIncident_txtTitle">New Incident</string>
+    <string name="formIncident_edtTitle">Incident title</string>
+    <string name="formIncident_edtContent">Incident content</string>
 </resources>

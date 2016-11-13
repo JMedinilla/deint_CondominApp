@@ -20,6 +20,6 @@ public interface IBoard {
      * The method validates the data in the components
      */
     interface Presenter {
-        boolean validateBoard(String en_title, String en_content, Date en_date, int en_category);
+        boolean validateBoard(String en_title, String en_content);
     }
 }

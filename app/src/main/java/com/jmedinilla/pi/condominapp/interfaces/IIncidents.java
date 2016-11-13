@@ -20,6 +20,6 @@ public interface IIncidents {
      * The method validates the data in the components
      */
     interface Presenter {
-        boolean validateIncidents(Date in_date, String in_title, String in_description);
+        boolean validateIncidents(String in_title, String in_description);
     }
 }

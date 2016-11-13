@@ -1,6 +1,5 @@
 package com.jmedinilla.pi.condominapp.models;
 
-import android.support.annotation.NonNull;
 
 import java.util.Comparator;
 import java.util.Date;
@@ -40,9 +39,10 @@ public class Model_Entry {
             //The object has to be an Entry
             if (obj instanceof Model_Entry) {
                 Model_Entry another = (Model_Entry) obj;
-                //If the Title and Content are equals, it's the same entry
+                //If the Title, Content and Category are equals, it's the same entry
                 if (this.en_title.toUpperCase().equals(another.en_title.toUpperCase())
-                        && this.en_content.toUpperCase().equals(another.en_content.toUpperCase())) {
+                        && this.en_content.toUpperCase().equals(another.en_content.toUpperCase())
+                        && this.en_category == another.en_category) {
                     result = true;
                 }
             }

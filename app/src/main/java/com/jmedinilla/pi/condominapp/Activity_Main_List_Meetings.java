@@ -58,7 +58,7 @@ public class Activity_Main_List_Meetings extends AppCompatActivity {
         main_meetings_listview = (ListView) findViewById(R.id.main_meetings_rcvMeetings);
     }
 
-    /* VOLVER A ACTIVAR CUANDO SE PONGA EL RECYCLER DE NUEVO
+    /* ACTIVAR CUANDO SE VUELVA A PONER EL RECYCLER
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_meetings, menu);

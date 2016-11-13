@@ -11,6 +11,7 @@ import com.jmedinilla.pi.condominapp.models.Model_User;
 public class Preferences_Profile {
     private static final int MODE = Context.MODE_PRIVATE;
     private static final String FILE = "com.jmedinilla.pi.condominapp_preferences";
+
     private static final String ACCESS = "accesskey";
     private static final String USER_COMMUNITY = "user_data_community"; //int
     private static final String USER_FLOOR = "user_data_floor";
@@ -19,6 +20,7 @@ public class Preferences_Profile {
     private static final String USER_MAIL = "user_data_mail";
     private static final String USER_NAME = "user_data_name";
     private static final String USER_CATEGORY = "user_data_category"; //int
+
     private SharedPreferences sharedPreferences;
     private SharedPreferences.Editor editor;
 

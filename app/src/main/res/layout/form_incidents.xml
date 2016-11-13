@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/form_incidents"
     android:layout_width="match_parent"
@@ -9,5 +10,73 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.jmedinilla.pi.condominapp.forms.Form_Incidents">
+
+    <TextView
+        android:id="@+id/formIncident_txtTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/formIncident_txtTitle"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="24sp" />
+
+    <ImageView
+        android:id="@+id/formIncident_btnAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:contentDescription="@string/contentdescription_imageview"
+        android:src="@android:drawable/ic_input_add" />
+
+    <ImageView
+        android:id="@+id/formIncident_imgPhoto"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_below="@+id/formIncident_txtTitle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:contentDescription="@string/contentdescription_imageview"
+        android:src="@mipmap/row_incident" />
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/formIncident_tilTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/formIncident_imgPhoto"
+        android:layout_marginTop="10dp"
+        app:counterEnabled="true"
+        app:errorEnabled="true"
+        app:errorTextAppearance="@style/error"
+        app:hintTextAppearance="@style/hint">
+
+        <EditText
+            android:id="@+id/formIncident_edtTitle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="@string/formIncident_edtTitle"
+            android:inputType="text"
+            android:textColor="@color/colorPrimaryDark" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/formIncident_tilContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/formIncident_tilTitle"
+        app:counterEnabled="true"
+        app:errorEnabled="true"
+        app:errorTextAppearance="@style/error"
+        app:hintTextAppearance="@style/hint">
+
+        <EditText
+            android:id="@+id/formIncident_edtContent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="@string/formIncident_edtContent"
+            android:inputType="text"
+            android:textColor="@color/colorPrimaryDark" />
+    </android.support.design.widget.TextInputLayout>
 
 </RelativeLayout>
