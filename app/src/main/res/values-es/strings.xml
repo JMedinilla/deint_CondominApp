@@ -37,4 +37,21 @@
     <string name="app_information">Información</string>
     <string name="app_meetings">Juntas</string>
     <string name="app_invalid_user">El usuario no existe</string>
+    <string name="formMeeting_txtTitle">Nueva junta</string>
+    <string name="formIncident_txtTitle">Nuevo incidente</string>
+    <string name="formIncident_edtTitle">Título del incidente</string>
+    <string name="formIncident_edtContent">Descripción del incidente</string>
+    <string name="formDocument_txtTitle">Nuevo documento</string>
+    <string name="formDocument_edtTitle">Título del documento</string>
+    <string name="formDocument_edtLink">Enlace del documento</string>
+    <string name="formDocument_edtDescription">Descripción del documento</string>
+    <string name="formDiary_edtTitle">Título de la nota</string>
+    <string name="formDiary_txtTitle">Nueva nota</string>
+    <string name="formDiary_edtContent">Contenido de la nota</string>
+    <string name="formCboard_txtTitle">Nueva entrada</string>
+    <string name="formCboard_edtTitle">Título de la entrada</string>
+    <string name="formCboard_edtContent">Contenido de la entrada</string>
+    <string name="formBoard_txtTitle">Nueva entrada</string>
+    <string name="formBoard_edtTitle">Título de la entrada</string>
+    <string name="formBoard_edtContent">Contenido de la entrada</string>
 </resources>
