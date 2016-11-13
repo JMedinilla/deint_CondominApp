@@ -73,7 +73,7 @@ public class Form_Board_Community extends AppCompatActivity {
                     ((ModelApplication) getApplication()).saveSecondEntry(entry);
                     finish();
                 } else
-                    Snackbar.make(findViewById(R.id.form_board_community), "already exists", Snackbar.LENGTH_SHORT).show();
+                    Snackbar.make(findViewById(R.id.form_board_community), getString(R.string.app_invalid_element), Snackbar.LENGTH_SHORT).show();
             }
         });
 

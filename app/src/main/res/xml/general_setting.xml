@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
-    <PreferenceCategory android:title="Login access">
+    <PreferenceCategory android:title="@string/pref_general_title">
         <SwitchPreference
             android:defaultValue="false"
             android:key="rememberaccesskey"
-            android:summary="Remember user's access login key"
-            android:title="Remember access key" />
+            android:summary="@string/pref_general_remember_summary"
+            android:title="@string/pref_general_remember_title" />
         <SwitchPreference
             android:defaultValue="false"
             android:key="keepuserconnected"
-            android:summary="Don't close the user session"
-            android:title="Stay logged" />
+            android:summary="@string/pref_general_stay_summary"
+            android:title="@string/pref_general_stay_title" />
     </PreferenceCategory>
 </PreferenceScreen>

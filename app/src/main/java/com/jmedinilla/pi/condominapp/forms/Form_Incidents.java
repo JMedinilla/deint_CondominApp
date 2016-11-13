@@ -74,7 +74,7 @@ public class Form_Incidents extends AppCompatActivity {
                     ((ModelApplication) getApplication()).saveIncident(incident);
                     finish();
                 } else
-                    Snackbar.make(findViewById(R.id.form_incidents), "already exists", Snackbar.LENGTH_SHORT).show();
+                    Snackbar.make(findViewById(R.id.form_incidents), getString(R.string.app_invalid_element), Snackbar.LENGTH_SHORT).show();
             }
         });
 

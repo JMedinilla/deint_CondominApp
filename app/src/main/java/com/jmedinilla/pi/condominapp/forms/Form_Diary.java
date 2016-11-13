@@ -66,7 +66,7 @@ public class Form_Diary extends AppCompatActivity {
                     ((ModelApplication) getApplication()).saveNote(note);
                     finish();
                 } else
-                    Snackbar.make(findViewById(R.id.form_diary), "already exists", Snackbar.LENGTH_SHORT).show();
+                    Snackbar.make(findViewById(R.id.form_diary), getString(R.string.app_invalid_element), Snackbar.LENGTH_SHORT).show();
             }
         });
 

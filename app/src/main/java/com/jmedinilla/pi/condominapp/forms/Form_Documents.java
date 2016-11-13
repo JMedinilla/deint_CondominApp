@@ -66,7 +66,7 @@ public class Form_Documents extends AppCompatActivity {
                     ((ModelApplication) getApplication()).saveDocument(document);
                     finish();
                 } else
-                    Snackbar.make(findViewById(R.id.form_documents), "already exists", Snackbar.LENGTH_SHORT).show();
+                    Snackbar.make(findViewById(R.id.form_documents), getString(R.string.app_invalid_element), Snackbar.LENGTH_SHORT).show();
             }
         });
 

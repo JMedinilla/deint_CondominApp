@@ -48,7 +48,7 @@ public class Form_Meetings extends AppCompatActivity {
                     ((ModelApplication) getApplication()).saveMeeting(meeting);
                     finish();
                 } else
-                    Snackbar.make(findViewById(R.id.form_meetings), "already exists", Snackbar.LENGTH_SHORT).show();
+                    Snackbar.make(findViewById(R.id.form_meetings), getString(R.string.app_invalid_element), Snackbar.LENGTH_SHORT).show();
             }
         });
     }

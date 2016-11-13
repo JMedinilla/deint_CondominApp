@@ -73,7 +73,7 @@ public class Form_Board extends AppCompatActivity {
                     ((ModelApplication) getApplication()).saveFirstEntry(entry);
                     finish();
                 } else
-                    Snackbar.make(findViewById(R.id.form_board), "already exists", Snackbar.LENGTH_SHORT).show();
+                    Snackbar.make(findViewById(R.id.form_board), getString(R.string.app_invalid_element), Snackbar.LENGTH_SHORT).show();
             }
         });
 

@@ -54,4 +54,10 @@
     <string name="formBoard_txtTitle">Nueva entrada</string>
     <string name="formBoard_edtTitle">Título de la entrada</string>
     <string name="formBoard_edtContent">Contenido de la entrada</string>
+    <string name="app_invalid_element">Este elemento ya existe</string>
+    <string name="pref_general_remember_summary">Recordar la clave de acceso del usuario</string>
+    <string name="pref_general_remember_title">Recordar clave de aceso</string>
+    <string name="pref_general_stay_title">Mantener sesión</string>
+    <string name="pref_general_stay_summary">Mantener la sesión de usuario abierta</string>
+    <string name="pref_general_title">Acceso</string>
 </resources>
