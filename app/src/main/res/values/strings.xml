@@ -67,4 +67,5 @@
     <string name="pref_general_remember_summary">Remember users access login key</string>
     <string name="pref_general_stay_title">Stay logged</string>
     <string name="pref_general_stay_summary">Dont close the user session</string>
+    <string name="profile">Profile</string>
 </resources>

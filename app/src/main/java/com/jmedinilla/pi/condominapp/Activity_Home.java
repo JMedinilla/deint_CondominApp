@@ -41,6 +41,9 @@ public class Activity_Home extends AppCompatActivity {
                 intent = new Intent(Activity_Home.this, Activity_Main_Profile.class);
                 startActivity(intent);
                 break;*/
+            case R.id.action_home_profile:
+                startActivity(new Intent(Activity_Home.this, ProfileActivity.class));
+                break;
             case R.id.action_home_settings:
                 intent = new Intent(Activity_Home.this, Activity_Main_Settings.class);
                 startActivity(intent);
